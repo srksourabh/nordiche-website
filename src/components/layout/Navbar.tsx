@@ -3,10 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, X } from "lucide-react";
+import { X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { NAV_LINKS } from "@/lib/constants";
-import { Button } from "@/components/ui/Button";
 import { cn, getIcon } from "@/lib/utils";
 
 export function Navbar() {
@@ -63,12 +62,6 @@ export function Navbar() {
             })}
           </nav>
 
-          <div className="hidden lg:block">
-            <Button aria-label="Request a quote" href="/contact">
-              Request Quote <ArrowRight className="h-4 w-4" />
-            </Button>
-          </div>
-
           <button
             aria-label={open ? "Close mobile navigation" : "Open mobile navigation"}
             className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-nord-slate)] text-[var(--color-nord-white)] lg:hidden"
@@ -120,10 +113,6 @@ export function Navbar() {
                 </motion.div>
               ))}
             </div>
-
-            <Button aria-label="Request a custom solution" className="w-full" href="/contact">
-              Request a Custom Solution <ArrowRight className="h-4 w-4" />
-            </Button>
           </motion.div>
         ) : null}
       </AnimatePresence>

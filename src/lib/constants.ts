@@ -1,8 +1,8 @@
 export const SITE = {
   name: "Nordische Energy",
-  tagline: "Advanced Battery Solutions for EV, Energy Storage & Industrial Applications",
+  tagline: "Advanced Energy Storage Solutions for EV, Grid, Telecom and Industrial Applications",
   description:
-    "High-performance lithium battery systems engineered for safety, longevity, and efficiency. Powering electric vehicles, renewable energy grids, and industrial applications across Europe.",
+    "Advanced energy storage systems and battery technologies engineered for safety, long lifecycle, fast charging, and non-flammable operation across India and global markets.",
   url: "https://nordische-energy.com",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
     ? `+${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER.replace(/[^\d]/g, "")}`
@@ -15,6 +15,13 @@ export const SITE = {
   xtwitter: "https://x.com/nordischeenergy",
 };
 
+export const INDIA_OFFICE = {
+  company: "Nordische Energy Systems Pvt Ltd",
+  city: "Bengaluru, Karnataka, India",
+  summary:
+    "Indian operations supporting energy storage R&D, commercialization outreach, and project conversations across mobility, grid, and industrial sectors.",
+} as const;
+
 export const NAV_LINKS = [
   { label: "Products", href: "/products" },
   { label: "Technology", href: "/technology" },
@@ -26,18 +33,33 @@ export const NAV_LINKS = [
 ] as const;
 
 export const TRUST_ITEMS = [
-  { label: "ISO 9001:2015 Certified", icon: "shield" },
-  { label: "CE & IEC Compliant", icon: "certificate" },
-  { label: "50+ Deployed Projects", icon: "checkCircle" },
-  { label: "6 Years Manufacturing", icon: "factory" },
-  { label: "EU RoHS Compliant", icon: "leaf" },
+  { label: "India R&D and Global Outreach", icon: "factory" },
+  { label: "Non-Flammable Storage Chemistry", icon: "shield" },
+  { label: "Commercialization-Ready Platforms", icon: "certificate" },
+  { label: "Grid to Mobility Applications", icon: "checkCircle" },
+  { label: "Recyclable Material Focus", icon: "leaf" },
 ] as const;
 
 export const STATS = [
-  { value: "200+", label: "Battery Systems Deployed" },
-  { value: "50K+", label: "Cells Tested Monthly" },
-  { value: "6", label: "Years Manufacturing Experience" },
-  { value: "99.2%", label: "System Reliability Rate" },
+  { value: "2", label: "Core Energy Storage Platforms" },
+  { value: "150 Wh/kg", label: "Aluminium-Graphene Energy Density" },
+  { value: "3000+", label: "Cycle Life Target" },
+  { value: "90%+", label: "Recyclable Recovery Potential" },
+] as const;
+
+export const ENERGY_STORAGE_HIGHLIGHTS = [
+  {
+    title: "Aluminium-Graphene Battery",
+    description:
+      "A safer, non-flammable storage platform designed around fast charging, strong power delivery, and recyclable material availability beyond lithium-heavy supply chains.",
+    metrics: ["150 Wh/kg energy density", "800 W/kg power density", "Up to 10C fast charging"],
+  },
+  {
+    title: "Lead Ultra-Carbon Battery",
+    description:
+      "An upgraded lead-based architecture using engineered carbon materials to improve cycle life, charge acceptance, and deep-discharge resilience for stationary applications.",
+    metrics: ["Improved cycle life", "Faster charging", "High-rate discharge capability"],
+  },
 ] as const;
 
 export const PRODUCTS = [

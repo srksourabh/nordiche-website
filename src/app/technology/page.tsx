@@ -1,6 +1,7 @@
+import Image from "next/image";
 import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { TECH_PILLARS } from "@/lib/constants";
+import { ENERGY_STORAGE_HIGHLIGHTS, TECH_PILLARS } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
 import { getIcon } from "@/lib/utils";
 
@@ -19,8 +20,9 @@ export default function TechnologyPage() {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-nord-teal)]">Technology</p>
           <h1 className="mt-4 text-5xl uppercase sm:text-6xl">Advanced Battery Technology</h1>
           <p className="mt-6 max-w-3xl text-lg text-[var(--color-nord-mist)]">
-            Performance starts long before pack assembly. It begins with architecture decisions, chemistry choice,
-            thermal pathways, firmware logic, and the discipline to validate each layer under real operating stress.
+            Performance starts long before pack assembly. It begins with chemistry choice, thermal pathways,
+            firmware logic, and the practical storage-story emphasis that customers now expect to see clearly:
+            safer materials, stronger charge behavior, and energy storage options that suit real infrastructure.
           </p>
         </div>
       </section>
@@ -88,6 +90,40 @@ export default function TechnologyPage() {
           </div>
 
           <div className="mt-16 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+            <Card className="p-8">
+              <h2 className="text-4xl uppercase">Energy Storage Platforms</h2>
+              <p className="mt-4 text-[var(--color-nord-light)]">
+                The reference site strongly emphasizes differentiated storage chemistry. We now surface that same
+                message here with clearer focus on aluminium-graphene and lead ultra-carbon platforms.
+              </p>
+              <div className="mt-6 overflow-hidden rounded-2xl border border-[var(--color-nord-slate)]">
+                <Image
+                  alt="Energy storage platform comparison graphic"
+                  className="h-auto w-full"
+                  height={720}
+                  src="/graphics/energy-storage-platforms.svg"
+                  width={960}
+                />
+              </div>
+              <div className="mt-6 grid gap-4">
+                {ENERGY_STORAGE_HIGHLIGHTS.map((item) => (
+                  <div key={item.title} className="rounded-2xl border border-[var(--color-nord-slate)] p-5">
+                    <h3 className="text-2xl uppercase">{item.title}</h3>
+                    <p className="mt-3 text-sm text-[var(--color-nord-mist)]">{item.description}</p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {item.metrics.map((metric) => (
+                        <span
+                          key={metric}
+                          className="rounded-full border border-[var(--color-nord-slate)] px-3 py-1 text-xs uppercase tracking-[0.14em] text-[var(--color-nord-teal)]"
+                        >
+                          {metric}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Card>
             <Card className="p-8">
               <h2 className="text-4xl uppercase">Chemistry Comparison</h2>
               <div className="mt-6 overflow-hidden rounded-2xl border border-[var(--color-nord-slate)]">

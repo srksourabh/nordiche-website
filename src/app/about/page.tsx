@@ -4,7 +4,7 @@ import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { ABOUT_CONTENT } from "@/lib/constants";
+import { ABOUT_CONTENT, INDIA_OFFICE } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata({
@@ -116,6 +116,12 @@ export default function AboutPage() {
               Tour Manufacturing <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
+          <Card className="mt-8 p-8">
+            <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-nord-teal)]">India Highlight</p>
+            <h3 className="mt-3 text-3xl uppercase">{INDIA_OFFICE.company}</h3>
+            <p className="mt-3 text-[var(--color-nord-light)]">{INDIA_OFFICE.summary}</p>
+            <p className="mt-2 text-sm text-[var(--color-nord-mist)]">{INDIA_OFFICE.city}</p>
+          </Card>
         </div>
       </section>
 

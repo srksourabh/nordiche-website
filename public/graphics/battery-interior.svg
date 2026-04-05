@@ -1,0 +1,21 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="720" rx="36" fill="#0A0C10"/>
+  <rect x="48" y="48" width="864" height="624" rx="28" fill="#111520" stroke="#2A3549"/>
+  <rect x="110" y="170" width="740" height="360" rx="28" fill="#0F1420" stroke="#00D4AA" stroke-opacity="0.3"/>
+  <rect x="160" y="230" width="120" height="240" rx="18" fill="#00D4AA" fill-opacity="0.12" stroke="#00D4AA"/>
+  <rect x="300" y="230" width="120" height="240" rx="18" fill="#00D4AA" fill-opacity="0.08" stroke="#00D4AA" stroke-opacity="0.8"/>
+  <rect x="440" y="230" width="120" height="240" rx="18" fill="#00D4AA" fill-opacity="0.12" stroke="#00D4AA"/>
+  <rect x="580" y="230" width="120" height="240" rx="18" fill="#00D4AA" fill-opacity="0.08" stroke="#00D4AA" stroke-opacity="0.8"/>
+  <line x1="220" y1="210" x2="360" y2="210" stroke="#F5A623" stroke-width="8"/>
+  <line x1="360" y1="210" x2="500" y2="210" stroke="#F5A623" stroke-width="8"/>
+  <line x1="500" y1="210" x2="640" y2="210" stroke="#F5A623" stroke-width="8"/>
+  <line x1="220" y1="490" x2="360" y2="490" stroke="#8494B0" stroke-width="8"/>
+  <line x1="360" y1="490" x2="500" y2="490" stroke="#8494B0" stroke-width="8"/>
+  <line x1="500" y1="490" x2="640" y2="490" stroke="#8494B0" stroke-width="8"/>
+  <circle cx="760" cy="220" r="58" fill="#00D4AA" fill-opacity="0.12" stroke="#00D4AA"/>
+  <circle cx="760" cy="220" r="28" fill="#00D4AA"/>
+  <circle cx="760" cy="390" r="58" fill="#F5A623" fill-opacity="0.12" stroke="#F5A623"/>
+  <path d="M750 360H770V388H790L760 420V392H740L750 360Z" fill="#F5A623"/>
+  <text x="108" y="118" fill="#F0F4FA" font-family="Arial, sans-serif" font-size="34" font-weight="700">Battery Interior and Storage Architecture</text>
+  <text x="108" y="585" fill="#8494B0" font-family="Arial, sans-serif" font-size="24">Cell arrays, busbars, thermal zones and integrated power routing</text>
+</svg>

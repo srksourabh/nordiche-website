@@ -1,0 +1,18 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="720" rx="36" fill="#0A0C10"/>
+  <rect x="64" y="82" width="372" height="556" rx="30" fill="#111520" stroke="#2A3549"/>
+  <rect x="524" y="82" width="372" height="556" rx="30" fill="#111520" stroke="#2A3549"/>
+  <text x="102" y="142" fill="#00D4AA" font-family="Arial, sans-serif" font-size="30" font-weight="700">Aluminium-Graphene</text>
+  <text x="562" y="142" fill="#F5A623" font-family="Arial, sans-serif" font-size="30" font-weight="700">Lead Ultra-Carbon</text>
+  <circle cx="250" cy="320" r="110" fill="#00D4AA" fill-opacity="0.1" stroke="#00D4AA" stroke-width="2"/>
+  <circle cx="250" cy="320" r="54" fill="#00D4AA"/>
+  <path d="M238 285H262V322H286L250 370V333H224L238 285Z" fill="#0A0C10"/>
+  <rect x="618" y="212" width="180" height="216" rx="22" fill="#F5A623" fill-opacity="0.12" stroke="#F5A623" stroke-width="2"/>
+  <rect x="648" y="242" width="120" height="156" rx="14" fill="#F5A623" fill-opacity="0.35"/>
+  <circle cx="690" cy="456" r="12" fill="#F5A623"/>
+  <circle cx="726" cy="456" r="12" fill="#F5A623"/>
+  <text x="102" y="520" fill="#F0F4FA" font-family="Arial, sans-serif" font-size="24">Fast charge, non-flammable, recyclable</text>
+  <text x="102" y="558" fill="#8494B0" font-family="Arial, sans-serif" font-size="22">Grid storage, EV support, industrial power</text>
+  <text x="562" y="520" fill="#F0F4FA" font-family="Arial, sans-serif" font-size="24">Enhanced cycle life with engineered carbon</text>
+  <text x="562" y="558" fill="#8494B0" font-family="Arial, sans-serif" font-size="22">Stationary systems, backup power, hybrid duty</text>
+</svg>

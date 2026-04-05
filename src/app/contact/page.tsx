@@ -1,7 +1,7 @@
 import { Clock3, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { LeadCapture } from "@/components/sections/LeadCapture";
 import { Card } from "@/components/ui/Card";
-import { SITE } from "@/lib/constants";
+import { INDIA_OFFICE, SITE } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
 import { toWhatsAppHref } from "@/lib/utils";
 
@@ -53,6 +53,10 @@ export default function ContactPage() {
                 <p className="flex items-start gap-3 whitespace-pre-line">
                   <MapPin className="mt-0.5 h-4 w-4 text-[var(--color-nord-teal)]" />
                   {SITE.address}
+                </p>
+                <p className="flex items-start gap-3 whitespace-pre-line">
+                  <MapPin className="mt-0.5 h-4 w-4 text-[var(--color-nord-teal)]" />
+                  {INDIA_OFFICE.company}{"\n"}{INDIA_OFFICE.city}
                 </p>
                 <p className="flex items-center gap-3">
                   <Clock3 className="h-4 w-4 text-[var(--color-nord-teal)]" />

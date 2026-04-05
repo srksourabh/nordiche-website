@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Download, MessageCircle } from "lucide-react";
-import { FOOTER_LINKS, SITE } from "@/lib/constants";
+import { FOOTER_LINKS, INDIA_OFFICE, SITE } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { getIcon, toWhatsAppHref } from "@/lib/utils";
 
@@ -17,6 +17,16 @@ export function Footer() {
               Nordische <span className="text-[var(--color-nord-teal)]">Energy</span>
             </p>
             <p className="mt-4 max-w-md text-sm text-[var(--color-nord-mist)]">{SITE.description}</p>
+            <div className="mt-5 grid gap-3 text-sm text-[var(--color-nord-light)]">
+              <div className="rounded-2xl border border-[var(--color-nord-slate)] p-3">
+                <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-nord-teal)]">Germany Office</p>
+                <p className="mt-2 whitespace-pre-line">{SITE.address}</p>
+              </div>
+              <div className="rounded-2xl border border-[var(--color-nord-slate)] p-3">
+                <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-nord-teal)]">India Presence</p>
+                <p className="mt-2 whitespace-pre-line">{INDIA_OFFICE.company}{"\n"}{INDIA_OFFICE.city}</p>
+              </div>
+            </div>
           </div>
           <div className="flex items-center gap-4">
             <a
