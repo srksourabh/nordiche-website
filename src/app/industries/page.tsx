@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { IndustriesFaq } from "@/components/sections/IndustriesFaq";
 import { Card } from "@/components/ui/Card";
+import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { INDUSTRIES } from "@/lib/constants";
 import { buildMetadata } from "@/lib/metadata";
@@ -17,16 +18,12 @@ export const metadata = buildMetadata({
 export default function IndustriesPage() {
   return (
     <div>
-      <section className="border-b border-[var(--color-nord-slate)] bg-[var(--color-nord-deep)] py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-nord-teal)]">Industries</p>
-          <h1 className="mt-4 text-5xl uppercase sm:text-6xl">Powering Multiple Industries</h1>
-          <p className="mt-6 max-w-3xl text-lg text-[var(--color-nord-mist)]">
-            From road vehicles to solar farms to telecom towers, we engineer battery systems around the
-            actual failure modes, operating constraints, and performance economics of each industry.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        label="Industries"
+        title="Powering Multiple Industries"
+        description="From road vehicles to solar farms to telecom towers, we engineer battery systems around the actual failure modes, operating constraints, and performance economics of each industry."
+        image="/images/hero-industries.png"
+      />
 
       <section className="py-[var(--section-py)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

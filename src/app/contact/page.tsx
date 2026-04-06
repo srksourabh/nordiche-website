@@ -1,7 +1,9 @@
 import { Clock3, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { LeadCapture } from "@/components/sections/LeadCapture";
 import { Card } from "@/components/ui/Card";
-import { INDIA_OFFICE, SITE } from "@/lib/constants";
+import { PageHero } from "@/components/ui/PageHero";
+import { HEADQUARTERS, SITE } from "@/lib/constants";
+// HEADQUARTERS used for map query
 import { buildMetadata } from "@/lib/metadata";
 import { toWhatsAppHref } from "@/lib/utils";
 
@@ -15,15 +17,12 @@ export const metadata = buildMetadata({
 export default function ContactPage() {
   return (
     <div>
-      <section className="border-b border-[var(--color-nord-slate)] bg-[var(--color-nord-deep)] py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-nord-teal)]">Contact</p>
-          <h1 className="mt-4 text-5xl uppercase sm:text-6xl">Let&apos;s Build Your Battery Solution</h1>
-          <p className="mt-6 max-w-3xl text-lg text-[var(--color-nord-mist)]">
-            Fill in your requirement below. Our application engineers respond within 24 business hours.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        label="Contact"
+        title="Let's Build Your Battery Solution"
+        description="Fill in your requirement below. Our application engineers respond within 24 business hours."
+        image="/images/hero-contact.png"
+      />
 
       <section className="py-[var(--section-py)]">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8">
@@ -56,20 +55,20 @@ export default function ContactPage() {
                 </p>
                 <p className="flex items-start gap-3 whitespace-pre-line">
                   <MapPin className="mt-0.5 h-4 w-4 text-[var(--color-nord-teal)]" />
-                  {INDIA_OFFICE.company}{"\n"}{INDIA_OFFICE.city}
+                  {SITE.address}
                 </p>
                 <p className="flex items-center gap-3">
                   <Clock3 className="h-4 w-4 text-[var(--color-nord-teal)]" />
-                  Mon–Fri 08:00–18:00 CET
+                  Mon–Fri 09:00–18:00 IST
                 </p>
               </div>
               <div className="mt-5 overflow-hidden rounded-2xl border border-[var(--color-nord-slate)]">
                 <iframe
-                  aria-label="Map showing Nordische Energy office in Berlin"
+                  aria-label="Map showing Nordische Energy office in Bangalore"
                   className="h-64 w-full"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps?q=10115%20Berlin%20Germany&z=13&output=embed"
+                  src={`https://www.google.com/maps?q=${HEADQUARTERS.mapQuery}&z=14&output=embed`}
                 />
               </div>
             </Card>

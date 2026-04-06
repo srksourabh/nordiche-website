@@ -1,25 +1,29 @@
 export const SITE = {
-  name: "Nordische Energy",
-  tagline: "Advanced Energy Storage Solutions for EV, Grid, Telecom and Industrial Applications",
+  name: "Nordische Energy Systems",
+  tagline: "Innovating Sustainable Energy for a Greener Tomorrow",
   description:
-    "Advanced energy storage systems and battery technologies engineered for safety, long lifecycle, fast charging, and non-flammable operation across India and global markets.",
-  url: "https://nordische-energy.com",
+    "Deep-tech R&D powerhouse pioneering breakthrough climate change technologies — from aluminium-graphene batteries and seawater mining to 30+ advanced active materials for global markets.",
+  url: "https://nordischeenergy.com",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
     ? `+${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER.replace(/[^\d]/g, "")}`
-    : "+4900000000000",
-  email: "info@nordische-energy.com",
-  phone: "+49 000 000 0000",
-  address: "Nordische Energy GmbH\nIndustriestraße 42\n10115 Berlin, Germany",
-  founded: "2018",
+    : "+919986004311",
+  email: "info@nordischeenergy.com",
+  phone: "+91 9986004311",
+  phone2: "+91 9830526595",
+  address: "Nordische Energy Systems Pvt Ltd\n91 Springboard Business Hub, #45/3\n1st Floor, Gopala Krishna Complex\nResidency Road, Bangalore-560025\nKarnataka, India",
+  cin: "U40106KA2022PTC158401",
+  founded: "2022",
   linkedin: "https://linkedin.com/company/nordische-energy",
   xtwitter: "https://x.com/nordischeenergy",
+  brochure: "/NES-Business-Brochure.docx",
 };
 
-export const INDIA_OFFICE = {
+export const HEADQUARTERS = {
   company: "Nordische Energy Systems Pvt Ltd",
   city: "Bengaluru, Karnataka, India",
   summary:
-    "Indian operations supporting energy storage R&D, commercialization outreach, and project conversations across mobility, grid, and industrial sectors.",
+    "Deep-tech R&D powerhouse headquartered in Bangalore, staffed by elite research scientists with advanced degrees in chemistry, energy storage, and physics.",
+  mapQuery: "91+Springboard+Residency+Road+Bangalore+560025",
 } as const;
 
 export const NAV_LINKS = [
@@ -41,24 +45,28 @@ export const TRUST_ITEMS = [
 ] as const;
 
 export const STATS = [
-  { value: "2", label: "Core Energy Storage Platforms" },
-  { value: "150 Wh/kg", label: "Aluminium-Graphene Energy Density" },
-  { value: "3000+", label: "Cycle Life Target" },
-  { value: "90%+", label: "Recyclable Recovery Potential" },
+  { value: "220 Wh/kg", label: "Al-Graphene Energy Density" },
+  { value: "50×", label: "Faster Charging vs Li-ion" },
+  { value: "30+", label: "Active Material Variants" },
+  { value: "6", label: "Countries with Partners" },
 ] as const;
 
 export const ENERGY_STORAGE_HIGHLIGHTS = [
   {
     title: "Aluminium-Graphene Battery",
     description:
-      "A safer, non-flammable storage platform designed around fast charging, strong power delivery, and recyclable material availability beyond lithium-heavy supply chains.",
-    metrics: ["150 Wh/kg energy density", "800 W/kg power density", "Up to 10C fast charging"],
+      "Non-toxic, non-flammable battery technology free from cobalt and rare earth materials. Charges up to 50× faster than comparable lithium-ion, with commercial-grade pouch cells already manufactured and tested at CIPET Bangalore and in Spain.",
+    metrics: ["220 Wh/kg energy density", "50× faster charging", "3,000+ cycle life", ">90% recyclable", "No thermal runaway"],
+    status: "Technology fully developed — commercial-grade pouch cells manufactured and tested",
+    applications: ["EV batteries", "Consumer electronics", "Medical devices"],
   },
   {
-    title: "Lead Ultra-Carbon Battery",
+    title: "Lead Ultra-Carbon Battery (LCUB)",
     description:
-      "An upgraded lead-based architecture using engineered carbon materials to improve cycle life, charge acceptance, and deep-discharge resilience for stationary applications.",
-    metrics: ["Improved cycle life", "Faster charging", "High-rate discharge capability"],
+      "Next-generation alternative to traditional lead-acid batteries using 0.5–0.98% engineered carbon in the anode. Acts as an electrochemical pseudo-capacitor, delivering ~100% cycle life increase and 2× faster recharging at comparable price points.",
+    metrics: ["~100% cycle life increase", "2× faster recharging", "300 kW exported to Germany", "1.5 MW under production"],
+    status: "300 kW grid storage solutions exported to Germany, 1.5 MW more under production",
+    applications: ["Grid storage", "Solar energy storage", "ICE vehicles"],
   },
 ] as const;
 
@@ -392,30 +400,267 @@ export const MANUFACTURING_CONTENT = {
 } as const;
 
 export const ABOUT_CONTENT = {
-  headline: "Engineering the Future of Energy Storage",
+  headline: "Innovating Sustainable Energy for a Greener Tomorrow",
   story: [
-    "Nordische Energy was founded in 2018 by a team of electrochemical engineers and embedded systems developers who believed that advanced battery technology should be accessible to more than just the largest automotive OEMs.",
-    "Starting with custom battery development for industrial automation clients in Berlin, the company grew its competency in cell selection, BMS firmware, and mechanical integration to the point where it could address the full spectrum of battery applications — from commercial EV platforms to renewable energy storage to critical telecom infrastructure.",
-    "Today, Nordische employs 45 engineers and technicians across design, manufacturing, and field support. We have deployed over 200 battery systems representing more than 15 MWh of total installed capacity. Every project is led by a dedicated application engineer and backed by our in-house manufacturing and testing facility.",
-    "Our goal is not to be the largest battery manufacturer in Europe. It is to be the most trusted one — the company that clients call when the application is too demanding for commodity solutions, when the specifications are tight, and when failure is not an option.",
+    "Nordische Energy Systems Pvt Ltd (NES), established in 2022, aims to revolutionize the energy landscape by spearheading research and development in breakthrough climate change technologies.",
+    "Headquartered in Bangalore, NES is a deep-tech R&D powerhouse, staffed by a team of elite research scientists with advanced degrees in chemistry, energy storage, and physics.",
+    "Our four technology pillars — Innovative Energy Storage, Integrated Metal Extraction, Active & Advanced Materials, and Green Hydrogen — span the full value chain from raw material innovation to finished energy systems.",
+    "NES is dedicated to creating scalable, high-quality, affordable technologies that are environmentally sustainable, technologically advanced, and designed to benefit society on a large scale.",
   ],
   vision:
-    "A world where reliable, sustainable energy storage enables every industry to operate without fossil fuels — not because it is mandated, but because it is the economically superior choice.",
+    "To pioneer ecologically sustainable and socially inclusive technologies, promoting environmental and social justice.",
   mission:
-    "To design and manufacture battery systems that set the standard for performance, safety, and longevity — solving the hardest energy storage challenges with engineering precision.",
+    "To catalyse the global shift towards sustainable energy by innovating and delivering cutting-edge, eco-friendly solutions.",
   values: [
-    { title: "Engineering Integrity", description: "We do not ship what we would not put in our own vehicles." },
-    { title: "Radical Transparency", description: "Every datasheet reflects real tested performance, not marketing targets." },
-    { title: "Client Partnership", description: "We treat every project as if the client is our only client." },
-    { title: "Continuous Advancement", description: "We invest 12% of revenue in R&D because standing still is regression." },
+    { title: "Ecological Sustainability", description: "Every technology we develop prioritises environmental responsibility and resource efficiency." },
+    { title: "Social Inclusivity", description: "We design technologies that benefit communities at scale, not just corporations." },
+    { title: "Scientific Excellence", description: "Our team of elite research scientists pushes boundaries in chemistry, energy storage, and physics." },
+    { title: "Scalable Innovation", description: "We build high-quality, affordable solutions designed for global deployment." },
   ],
-  team: [
-    { name: "Dr. Lars Bergström", role: "Co-Founder & Chief Technology Officer", bio: "PhD Electrochemistry, KTH Royal Institute of Technology. 14 years battery R&D." },
-    { name: "Anna Kaufmann", role: "Co-Founder & Chief Operating Officer", bio: "Former manufacturing director at a tier-1 automotive supplier. 12 years ops." },
-    { name: "Felix Krause", role: "Head of BMS Engineering", bio: "Embedded systems architect with 9 years in automotive-grade firmware development." },
-    { name: "Priya Sundaram", role: "Lead Application Engineer", bio: "MEng Power Electronics, TU Berlin. Specializes in thermal and electrical system design." },
+  milestones: [
+    { title: "Al-G Technology Tested", description: "Aluminium-graphene battery successfully tested at CIPET Bangalore and in Spain." },
+    { title: "Pouch Cells Manufactured", description: "Commercial-grade pouch cells manufactured in Spain using Al-G technology." },
+    { title: "Grid Storage Exported", description: "300 kW LCUB grid storage solutions exported to Germany; 1.5 MW more under production." },
+    { title: "SWM Prototype Developed", description: "Sea Water Mining & Green Hydrogen laboratory-grade prototype successfully developed." },
+    { title: "Active Materials Produced", description: "Significant quantities of few-layered graphene and 30+ advanced materials produced and tested." },
+  ],
+  partners: [
+    { name: "CIPET", location: "Bangalore, India", role: "R&D of Aluminium Graphene technology", logo: "/images/partners/cipet.png" },
+    { name: "CSIR-AMPRI", location: "Bhopal, India", role: "Aluminium Foam technology", logo: "/images/partners/csir-ampri.svg" },
+    { name: "Iolitec", location: "Germany", role: "Electrolyte manufacturing for Al-G Battery", logo: "/images/partners/iolitec-logo.svg" },
+    { name: "Albufera Energy Storage S.L.", location: "Spain", role: "Commercial-grade pouch cell development", logo: "/images/partners/albufera.png" },
+    { name: "DaVinci Supercars Co", location: "USA", role: "Al-G Battery factory setup", logo: "/images/partners/davinci.svg" },
+    { name: "Sakshi Auto Parts (EMIKO)", location: "India", role: "LCUB battery manufacturing", logo: "/images/partners/sakshi.svg" },
+    { name: "Sister Nivedita University", location: "India", role: "SWM and Green Hydrogen R&D", logo: "/images/partners/snu.svg" },
+    { name: "Future Relevant Consulting", location: "India", role: "Strategy, expertise, and fundraising", logo: "/images/partners/future-relevant.svg" },
+  ],
+  businessModel: [
+    { title: "Technology Licensing", description: "Licensing proprietary battery and extraction technologies to manufacturers globally." },
+    { title: "Royalty Fees", description: "Revenue from sales of products utilizing NES technology." },
+    { title: "Active Materials Supply", description: "Direct supply of 30+ advanced materials for battery and industrial applications." },
+    { title: "Pouch Cell Manufacturing", description: "NES-owned aluminium-graphene pouch cell manufacturing units." },
+  ],
+  geographicReach: ["India", "Germany", "Spain", "Holland", "UK", "USA"],
+  targetMarkets: [
+    "Consumer Electronics", "EV Manufacturers", "Renewable Energy Storage", "Medical Devices",
+    "Industrial Applications", "Defence & Aerospace", "Automotive (ICE & Hybrid)",
+    "Telecommunications", "Smart Grids", "Agriculture", "Marine & Shipping",
+    "Military & Defense", "Electric Aviation", "Off-Grid Energy Solutions", "Construction & Infrastructure",
   ],
 } as const;
+
+export const TECHNOLOGY_VERTICALS = [
+  {
+    slug: "energy-storage",
+    name: "Energy Storage",
+    tagline: "Non-Flammable, High-Cycle Battery Platforms",
+    description:
+      "Nordische develops two differentiated energy storage chemistries — Aluminium-Ion Graphene and Lead Ultra-Carbon — both at manufacturing readiness (TRL 10). These platforms prioritize safety, recyclability, and performance beyond conventional lithium supply chains.",
+    highlights: [
+      {
+        title: "Aluminium-Graphene Battery",
+        points: [
+          "Energy density: 150 Wh/kg",
+          "Power density: 800 W/kg",
+          "Ultra-fast charging up to 10C rate",
+          "Cycle life: >3,000 cycles",
+          "Coulombic efficiency: >97.8%",
+          "Recyclable rate: >90%",
+          "Non-toxic, non-flammable, no thermal runaway",
+        ],
+      },
+      {
+        title: "Lead Ultra-Carbon Battery",
+        points: [
+          "Proprietary 2D engineered carbonous materials in negative plates",
+          "Electrochemical pseudo-capacitor behavior for extended lifespan",
+          "Improved cycle life and faster charging",
+          "Enhanced extreme temperature performance",
+          "Superior high-rate power discharge",
+          "Reduced sulphation",
+        ],
+      },
+    ],
+    applications: ["Electric vehicles", "Consumer electronics", "Grid storage", "Industrial equipment", "Portable power", "Hybrid vehicles"],
+    icon: "battery",
+  },
+  {
+    slug: "hydrogen-seawater",
+    name: "Hydrogen & Seawater Mining",
+    tagline: "Powering Through the Blue Economy",
+    description:
+      "NES has developed a patent-pending integrated Sea Water Mining system that produces green hydrogen, extracts lithium and critical minerals, and generates fresh water — all from seawater. Using membrane-less electrolysis, sand-based thermal storage, and ceramic membrane separation, this nexus approach solves freshwater scarcity, eliminates brine waste, and creates multiple revenue streams from a single process.",
+    highlights: [
+      {
+        title: "Blue Economy & The Problem",
+        points: [
+          "Ocean represents 99% of Earth's living volume — if it were a country, GDP would rank 7th globally",
+          "Planned 80 GW hydrogen capacity needs ~110 million cubic metres of pure water",
+          "Reverse Osmosis drawbacks: high electricity, brine waste, carbon footprint",
+          "NES Integrated Nexus Approach produces hydrogen, fresh water, minerals, and electricity from seawater",
+        ],
+      },
+      {
+        title: "Sand-Based Thermal Desalination",
+        points: [
+          "Sand battery stores solar energy at 600–1,000°C",
+          "30% powers infrastructure immediately, 70% stored for overnight use",
+          "More water produced than electrolyzer needs — surplus for drinking/agriculture",
+          "Works with any heat source above 60°C",
+        ],
+      },
+      {
+        title: "Membrane-Less Green Hydrogen",
+        points: [
+          "Patent-pending box electrode with perforation — no expensive membranes",
+          "Ni-based electrocatalyst via hydrothermal method at 500°C",
+          "Low cost, scalable, environmentally friendly, highly durable",
+          "India targets 5 million tonnes green hydrogen/year by 2030",
+        ],
+      },
+      {
+        title: "Lithium & Mineral Extraction",
+        points: [
+          "Ceramic membrane with crystal structure selectively passes lithium ions",
+          "3-compartment electrochemical cell with copper cathode coated in engineering carbon",
+          "42,000-hour membrane life with negligible performance decay",
+          "FePO₄-coated titanium electrode for LiFePO₄ intercalation",
+          "Outputs: Lithium Hydroxide, Magnesium Hydroxide, Calcium Hydroxide, Soda Ash, Chlorine gas, Hydrogen",
+        ],
+      },
+      {
+        title: "Cost Analysis",
+        points: [
+          "Only ~€5 of electricity extracts: 1 kg Lithium + 0.87 kg Hydrogen + 2 kg Chlorine",
+          "Plus substantial Magnesium, Calcium, and Lye (NaOH)",
+          "Hydrogen and chlorine value more than offsets electricity cost",
+          "All electricity from captive solar — truly green and carbon-neutral",
+        ],
+      },
+    ],
+    applications: ["Green hydrogen fuel", "Lithium for batteries", "Industrial chlorine", "Drinking water production", "Magnesium for aerospace", "Calcium for industry", "Soda ash production", "Carbon-neutral heating"],
+    icon: "droplets",
+  },
+  {
+    slug: "advanced-materials",
+    name: "Advanced Light Materials",
+    tagline: "Ultra-Lightweight Foams for Aerospace, Automotive, and Beyond",
+    description:
+      "Nordische pioneers advanced light materials combining carbon-based and metal foams, offering an exceptional strength-to-weight ratio without compromising structural integrity. These materials represent a revolution in material science — ultra-lightweight, superior durability, and outstanding thermal and acoustic insulation.",
+    highlights: [
+      {
+        title: "Foam Technologies",
+        points: [
+          "Carbon-based foam — lightweight structural applications",
+          "Aluminium foams (open and closed cell) — impact absorption",
+          "Nickel foams — electrochemical and filtration applications",
+          "Exceptional thermal and acoustic insulation properties",
+        ],
+      },
+      {
+        title: "Industry Applications",
+        points: [
+          "Aerospace: weight reduction for enhanced fuel efficiency",
+          "Automotive: interiors, structural elements, insulation",
+          "Construction: lightweight structural panels",
+          "Medical: biocompatible scaffolds and implants",
+        ],
+      },
+    ],
+    applications: ["Aerospace components", "Automotive structures", "Thermal insulation", "Acoustic dampening", "Medical scaffolds"],
+    icon: "layers",
+  },
+  {
+    slug: "active-materials",
+    name: "Active Materials",
+    tagline: "Engineered Nanomaterials for Next-Generation Applications",
+    description:
+      "Nordische produces three families of advanced carbon-based nanomaterials — Few-Layered Graphene (FLG), Reduced Graphene Oxide (rGO), and Functionalized Multi-Walled Carbon Nanotubes (f-MWCNTs). Each is engineered for specific industrial needs with customizable properties.",
+    highlights: [
+      {
+        title: "Few-Layered Graphene (FLG)",
+        points: [
+          "2–5 layers thick with high electrical and thermal conductivity",
+          "Exceptional mechanical strength",
+          "Enhanced supercapacitors and battery performance",
+          "Ultra-sensitive gas and biomolecule detection",
+        ],
+      },
+      {
+        title: "rGO & f-MWCNTs",
+        points: [
+          "rGO: combines conductivity with improved processability",
+          "Large surface area for enhanced adsorption and catalysis",
+          "f-MWCNTs: high aspect ratio and tensile strength",
+          "Enhanced dispersibility in solvents and polymers",
+        ],
+      },
+    ],
+    applications: ["Energy storage enhancement", "Transparent electronics", "EMI shielding", "Drug delivery", "Water purification", "Wearable devices"],
+    icon: "atom",
+  },
+  {
+    slug: "metal-extraction",
+    name: "Metal & Material Extraction",
+    tagline: "Sustainable Recovery of Critical Minerals",
+    description:
+      "Our Metal and Material Extraction division develops efficient, eco-friendly, and economically viable methods for extracting essential metals from unconventional sources — seawater, brine, and industrial byproducts like fly ash. This diversifies global supply chains while supporting circular economy principles.",
+    highlights: [
+      {
+        title: "Extraction Technologies",
+        points: [
+          "Lithium from seawater via advanced membrane-based electrodialysis",
+          "Magnesium from oceanic cation-rich water treatment",
+          "Lithium and gallium recovery from coal fly ash",
+          "Comprehensive byproduct utilization: chlorine, hydrogen, soda ash",
+        ],
+      },
+      {
+        title: "Sustainability Impact",
+        points: [
+          "Climate change mitigation through reduced mining impact",
+          "Circular economy: converting waste streams to resources",
+          "High-purity output for aerospace, automotive, and biomedical use",
+          "Diversification of global critical mineral supply chains",
+        ],
+      },
+    ],
+    applications: ["Battery raw materials", "Aerospace alloys", "Biomedical magnesium", "Electronics manufacturing", "Catalyst production"],
+    icon: "pickaxe",
+  },
+  {
+    slug: "solar-desalination",
+    name: "Solar Desalination",
+    tagline: "Clean Water from Sun & Sand",
+    description:
+      "NES pioneers off-grid desalination systems that use solar heat and sand (SiO₂) as a thermal energy storage battery. The SiO₂ sand bed is not a filter — it is a thermal battery that stores solar energy during the day and powers desalination at night or on cloudy days. Zero chemicals, zero membranes, minimal maintenance.",
+    highlights: [
+      {
+        title: "SiO₂ Thermal Battery Technology",
+        points: [
+          "Sand stores solar energy as heat — powers desalination 24/7",
+          "High specific heat enables efficient heat storage",
+          "Low thermal conductivity ensures slow heat loss",
+          "Vacuum evaporation at lower temperatures reduces energy input",
+          ">70% energy efficiency",
+          "Zero chemicals, zero membranes, minimal maintenance",
+        ],
+      },
+      {
+        title: "Product Range",
+        points: [
+          "Solar Desalination Units: 50 to 10,000 litres/day",
+          "SiO₂-based Thermal Battery Systems for energy storage",
+          "Hybrid Solar + Induction Heating Plants",
+          "Designed for dry, remote, and energy-constrained regions",
+          "Scalable and accessible for climate-resilient communities",
+        ],
+      },
+    ],
+    applications: ["Drinking water in arid regions", "Agricultural irrigation", "Off-grid communities", "Industrial water supply", "Disaster relief"],
+    icon: "sunMedium",
+  },
+] as const;
 
 export const INDUSTRIES_OPTIONS = [
   "Electric Vehicles",
@@ -438,9 +683,17 @@ export const CAPACITY_OPTIONS = [
 
 export const FOOTER_LINKS = {
   products: [
-    { label: "Lithium-Ion Battery Packs", href: "/products/lithium-ion-battery-packs" },
-    { label: "EV Battery Modules", href: "/products/ev-battery-modules" },
-    { label: "Custom Battery Solutions", href: "/products/custom-battery-solutions" },
+    { label: "Lithium-Ion Battery Packs", href: "/products#lithium-ion-battery-packs" },
+    { label: "EV Battery Modules", href: "/products#ev-battery-modules" },
+    { label: "Custom Battery Solutions", href: "/products#custom-battery-solutions" },
+  ],
+  technologies: [
+    { label: "Energy Storage", href: "/technology/energy-storage" },
+    { label: "Hydrogen & Seawater", href: "/technology/hydrogen-seawater" },
+    { label: "Advanced Materials", href: "/technology/advanced-materials" },
+    { label: "Active Materials", href: "/technology/active-materials" },
+    { label: "Metal Extraction", href: "/technology/metal-extraction" },
+    { label: "Solar Desalination", href: "/technology/solar-desalination" },
   ],
   company: [
     { label: "About Us", href: "/about" },

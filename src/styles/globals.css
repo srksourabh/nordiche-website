@@ -176,3 +176,103 @@ a {
 .text-balance {
   text-wrap: balance;
 }
+
+/* Animated gradient border for premium cards */
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.glow-border {
+  position: relative;
+}
+
+.glow-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgb(0 212 170 / 0.3),
+    transparent 40%,
+    transparent 60%,
+    rgb(0 212 170 / 0.3)
+  );
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
+  z-index: -1;
+}
+
+/* Smooth reveal for scroll-triggered elements */
+@keyframes slide-up-fade {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ambient glow behind key sections */
+.ambient-glow {
+  position: relative;
+}
+
+.ambient-glow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgb(0 212 170 / 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Pulsing energy dot */
+@keyframes energy-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(0 212 170 / 0.6);
+  }
+
+  50% {
+    box-shadow: 0 0 0 10px rgb(0 212 170 / 0);
+  }
+}
+
+.energy-dot {
+  animation: energy-pulse 2s ease-in-out infinite;
+}
+
+/* Infinite marquee scrolling ticker */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 40s linear infinite;
+  width: max-content;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}

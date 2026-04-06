@@ -1,5 +1,6 @@
 import { LeadCapture } from "@/components/sections/LeadCapture";
 import { Card } from "@/components/ui/Card";
+import { PageHero } from "@/components/ui/PageHero";
 import { buildMetadata } from "@/lib/metadata";
 import { CASE_STUDIES } from "@/lib/constants";
 
@@ -13,12 +14,12 @@ export const metadata = buildMetadata({
 export default function CaseStudiesPage() {
   return (
     <div>
-      <section className="border-b border-[var(--color-nord-slate)] bg-[var(--color-nord-deep)] py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-nord-teal)]">Case Studies</p>
-          <h1 className="mt-4 text-5xl uppercase sm:text-6xl">Proven Performance in Real-World Applications</h1>
-        </div>
-      </section>
+      <PageHero
+        label="Case Studies"
+        title="Proven Performance in Real-World Applications"
+        description="Read how Nordische battery systems improved range, uptime, storage efficiency, and maintenance cost across live deployments."
+        image="/images/hero-case-studies.png"
+      />
 
       <section className="py-[var(--section-py)]">
         <div className="mx-auto max-w-7xl space-y-6 px-4 sm:px-6 lg:px-8">

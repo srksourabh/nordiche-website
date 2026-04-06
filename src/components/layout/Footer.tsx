@@ -1,6 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Download, MessageCircle } from "lucide-react";
-import { FOOTER_LINKS, INDIA_OFFICE, SITE } from "@/lib/constants";
+import { FOOTER_LINKS, SITE } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { getIcon, toWhatsAppHref } from "@/lib/utils";
 
@@ -13,18 +14,18 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-14 px-4 py-16 sm:px-6 lg:grid-cols-[1.2fr_1.8fr] lg:px-8">
         <div className="space-y-6">
           <div>
-            <p className="font-[var(--font-display)] text-3xl uppercase tracking-[0.18em] text-[var(--color-nord-white)]">
-              Nordische <span className="text-[var(--color-nord-teal)]">Energy</span>
-            </p>
+            <div className="flex items-center gap-3">
+              <Image alt="Nordische Energy" className="h-10 w-auto" height={40} src="/logo.png" width={133} />
+              <p className="font-[var(--font-display)] text-3xl uppercase tracking-[0.18em] text-[var(--color-nord-white)]">
+                Nordische <span className="text-[var(--color-nord-teal)]">Energy</span>
+              </p>
+            </div>
             <p className="mt-4 max-w-md text-sm text-[var(--color-nord-mist)]">{SITE.description}</p>
             <div className="mt-5 grid gap-3 text-sm text-[var(--color-nord-light)]">
               <div className="rounded-2xl border border-[var(--color-nord-slate)] p-3">
-                <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-nord-teal)]">Germany Office</p>
+                <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-nord-teal)]">Headquarters — India</p>
                 <p className="mt-2 whitespace-pre-line">{SITE.address}</p>
-              </div>
-              <div className="rounded-2xl border border-[var(--color-nord-slate)] p-3">
-                <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-nord-teal)]">India Presence</p>
-                <p className="mt-2 whitespace-pre-line">{INDIA_OFFICE.company}{"\n"}{INDIA_OFFICE.city}</p>
+                <p className="mt-2 text-[var(--color-nord-mist)]">{SITE.phone} / {SITE.phone2}</p>
               </div>
             </div>
           </div>
@@ -49,9 +50,9 @@ export function Footer() {
             </a>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Button aria-label="Download product catalogue" href="/catalogue.pdf" variant="ghost">
+            <Button aria-label="Download business brochure" href={SITE.brochure} variant="ghost">
               <Download className="h-4 w-4" />
-              Download Catalogue
+              Download Brochure
             </Button>
             <Button aria-label="Chat on WhatsApp" href={toWhatsAppHref(SITE.whatsapp)} target="_blank" variant="outline">
               <MessageCircle className="h-4 w-4 text-[#25D366]" />
@@ -85,8 +86,8 @@ export function Footer() {
       </div>
       <div className="border-t border-[var(--color-nord-slate)]">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-sm text-[var(--color-nord-mist)] sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-          <p>© 2024 Nordische Energy GmbH. All rights reserved.</p>
-          <p>Certifications: ISO 9001:2015 | CE | RoHS</p>
+          <p>© 2025 Nordische Energy Systems Pvt Ltd. CIN: {SITE.cin}. All rights reserved.</p>
+          <p>Partners in India · Germany · Spain · Holland · UK · USA</p>
         </div>
       </div>
     </footer>

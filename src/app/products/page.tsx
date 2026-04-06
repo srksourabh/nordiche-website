@@ -1,9 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { LeadCapture } from "@/components/sections/LeadCapture";
 import { Card } from "@/components/ui/Card";
+import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { PRODUCTS } from "@/lib/constants";
+import { PRODUCT_IMAGE_MAP } from "@/lib/imagery";
 import { buildMetadata } from "@/lib/metadata";
 import { getIcon } from "@/lib/utils";
 
@@ -17,33 +20,47 @@ export const metadata = buildMetadata({
 export default function ProductsPage() {
   return (
     <div>
-      <section className="border-b border-[var(--color-nord-slate)] bg-[var(--color-nord-deep)] py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-nord-teal)]">Products</p>
-          <h1 className="mt-4 text-5xl uppercase sm:text-6xl">Battery Solutions for Every Application</h1>
-          <p className="mt-6 max-w-3xl text-lg text-[var(--color-nord-mist)]">
-            We design around operational reality: duty cycle, footprint, safety regime, thermal profile, charging pattern,
-            and compliance path. The result is a battery product that performs in the field, not just on a datasheet.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        label="Products"
+        title="Battery Solutions for Every Application"
+        description="We design around operational reality: duty cycle, footprint, safety regime, thermal profile, charging pattern, and compliance path."
+        image="/images/hero-products.png"
+      />
 
       <section className="py-[var(--section-py)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-6 xl:grid-cols-3">
             {PRODUCTS.map((product) => {
               const Icon = getIcon(product.icon);
+
               return (
-                <Card key={product.slug} className="h-full border-t-4 p-7" style={{ borderTopColor: product.color }}>
+                <Card key={product.slug} id={product.slug} className="h-full border-t-4 p-7" style={{ borderTopColor: product.color }}>
+                  <div className="relative mb-6 overflow-hidden rounded-[1.5rem] border border-[var(--color-nord-slate)] bg-[var(--color-nord-black)]">
+                    <Image
+                      alt={`${product.name} product render`}
+                      className="h-64 w-full object-cover"
+                      height={640}
+                      loading="lazy"
+                      src={PRODUCT_IMAGE_MAP[product.slug]}
+                      width={960}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[color:rgb(10_12_16_/_0.82)] via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-4 rounded-full border border-[color:rgb(0_212_170_/_0.24)] bg-[color:rgb(10_12_16_/_0.85)] px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-[var(--color-nord-teal)]">
+                      Visualized product architecture
+                    </div>
+                  </div>
+
                   <Icon className="h-10 w-10" style={{ color: product.color }} />
                   <h2 className="mt-5 text-3xl uppercase">{product.name}</h2>
                   <p className="mt-2 text-sm uppercase tracking-[0.16em] text-[var(--color-nord-mist)]">{product.tagline}</p>
                   <p className="mt-4 text-sm text-[var(--color-nord-light)]">{product.fullDescription}</p>
+
                   <ul className="mt-6 space-y-2 text-sm text-[var(--color-nord-light)]">
                     {product.features.map((feature) => (
-                      <li key={feature}>• {feature}</li>
+                      <li key={feature}>- {feature}</li>
                     ))}
                   </ul>
+
                   <div className="mt-6 overflow-hidden rounded-2xl border border-[var(--color-nord-slate)]">
                     <table className="w-full text-left text-sm">
                       <tbody>
@@ -56,6 +73,7 @@ export default function ProductsPage() {
                       </tbody>
                     </table>
                   </div>
+
                   <div className="mt-6 flex flex-wrap gap-2 text-xs uppercase tracking-[0.14em] text-[var(--color-nord-teal)]">
                     {product.applications.map((application) => (
                       <span key={application} className="rounded-full border border-[var(--color-nord-slate)] px-3 py-1">
@@ -63,12 +81,13 @@ export default function ProductsPage() {
                       </span>
                     ))}
                   </div>
+
                   <Link
-                    aria-label={`View details for ${product.name}`}
+                    aria-label={`Request a quote for ${product.name}`}
                     className="mt-7 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-nord-teal)]"
-                    href={`/products/${product.slug}`}
+                    href="/contact"
                   >
-                    View Product <ArrowRight className="h-4 w-4" />
+                    Request a Quote <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Card>
               );
@@ -105,7 +124,10 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <LeadCapture title="Can't Find Your Specification?" description="Tell us what standard products are missing and we will map a custom solution around your application." />
+      <LeadCapture
+        description="Tell us what standard products are missing and we will map a custom solution around your application."
+        title="Can't Find Your Specification?"
+      />
     </div>
   );
 }

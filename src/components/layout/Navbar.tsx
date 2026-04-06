@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -34,12 +35,10 @@ export function Navbar() {
         )}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <Link aria-label="Go to Nordische Energy homepage" className="flex items-center gap-2" href="/">
-            <span className="font-[var(--font-display)] text-2xl font-extrabold tracking-[0.18em] text-[var(--color-nord-white)]">
-              NORDISCHE
-            </span>
-            <span className="font-[var(--font-display)] text-2xl font-extrabold tracking-[0.18em] text-[var(--color-nord-teal)]">
-              ENERGY
+          <Link aria-label="Go to Nordische Energy homepage" className="flex items-center gap-3" href="/">
+            <Image alt="Nordische Energy" className="h-9 w-auto" height={36} src="/logo.png" width={120} />
+            <span className="hidden font-[var(--font-display)] text-xl font-extrabold tracking-[0.18em] text-[var(--color-nord-white)] sm:inline">
+              NORDISCHE <span className="text-[var(--color-nord-teal)]">ENERGY</span>
             </span>
           </Link>
 
@@ -82,8 +81,11 @@ export function Navbar() {
             initial={{ opacity: 0 }}
           >
             <div className="mb-12 flex items-center justify-between">
-              <span className="font-[var(--font-display)] text-2xl font-extrabold tracking-[0.2em] text-[var(--color-nord-white)]">
-                NORDISCHE <span className="text-[var(--color-nord-teal)]">ENERGY</span>
+              <span className="flex items-center gap-3">
+                <Image alt="Nordische Energy" className="h-8 w-auto" height={32} src="/logo.png" width={106} />
+                <span className="font-[var(--font-display)] text-2xl font-extrabold tracking-[0.2em] text-[var(--color-nord-white)]">
+                  NORDISCHE <span className="text-[var(--color-nord-teal)]">ENERGY</span>
+                </span>
               </span>
               <button
                 aria-label="Close overlay menu"

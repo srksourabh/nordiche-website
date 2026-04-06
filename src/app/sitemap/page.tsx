@@ -15,12 +15,22 @@ const sitemapGroups = [
     title: "Products",
     links: [
       { href: "/products", label: "Products Overview", description: "All product lines and comparison table." },
-      { href: "/products/lithium-ion-battery-packs", label: "Lithium-Ion Battery Packs", description: "High-density packs for EV and industrial use." },
-      { href: "/products/ev-battery-modules", label: "EV Battery Modules", description: "Automotive-focused modular battery systems." },
-      { href: "/products/custom-battery-solutions", label: "Custom Battery Solutions", description: "Application-specific battery engineering." },
+      { href: "/products#lithium-ion-battery-packs", label: "Lithium-Ion Battery Packs", description: "High-density packs for EV and industrial use." },
+      { href: "/products#ev-battery-modules", label: "EV Battery Modules", description: "Automotive-focused modular battery systems." },
+      { href: "/products#custom-battery-solutions", label: "Custom Battery Solutions", description: "Application-specific battery engineering." },
     ],
   },
-  { title: "Technology", links: [{ href: "/technology", label: "Technology", description: "Battery architecture, BMS, chemistry, and safety." }] },
+  {
+    title: "Technology",
+    links: [
+      { href: "/technology", label: "Technology Overview", description: "All technology verticals and engineering pillars." },
+      { href: "/technology/energy-storage", label: "Energy Storage", description: "Aluminium-graphene and lead ultra-carbon batteries." },
+      { href: "/technology/hydrogen-seawater", label: "Hydrogen & Seawater Mining", description: "Clean hydrogen and mineral extraction." },
+      { href: "/technology/advanced-materials", label: "Advanced Light Materials", description: "Carbon and metal foam technologies." },
+      { href: "/technology/active-materials", label: "Active Materials", description: "Graphene and carbon nanotube nanomaterials." },
+      { href: "/technology/metal-extraction", label: "Metal & Material Extraction", description: "Sustainable critical mineral recovery." },
+    ],
+  },
   {
     title: "Industries",
     links: [

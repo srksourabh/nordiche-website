@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { PRODUCTS } from "@/lib/constants";
+import { PRODUCT_IMAGE_MAP } from "@/lib/imagery";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -28,7 +30,21 @@ export function ProductCards() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
               >
-                <Card className="h-full border-t-4 p-6" style={{ borderTopColor: product.color }}>
+                <Card className="group h-full border-t-4 p-6" style={{ borderTopColor: product.color }}>
+                  <div className="relative mb-6 overflow-hidden rounded-[1.5rem] border border-[var(--color-nord-slate)] bg-[var(--color-nord-black)]">
+                    <Image
+                      alt={`${product.name} product render`}
+                      className="h-56 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                      height={560}
+                      loading="lazy"
+                      src={PRODUCT_IMAGE_MAP[product.slug]}
+                      width={720}
+                    />
+                    <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[color:rgb(10_12_16_/_0.85)] to-transparent" />
+                    <div className="absolute bottom-4 left-4 rounded-full border border-[color:rgb(0_212_170_/_0.24)] bg-[color:rgb(10_12_16_/_0.82)] px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-[var(--color-nord-teal)]">
+                      Product line visual
+                    </div>
+                  </div>
                   <Icon className="h-10 w-10" style={{ color: product.color }} />
                   <h3 className="mt-5 text-3xl uppercase">{product.name}</h3>
                   <p className="mt-2 text-sm uppercase tracking-[0.16em] text-[var(--color-nord-mist)]">
@@ -45,7 +61,7 @@ export function ProductCards() {
                   <Link
                     aria-label={`View specifications for ${product.name}`}
                     className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-nord-teal)]"
-                    href={`/products/${product.slug}`}
+                    href={`/products#${product.slug}`}
                   >
                     View Specifications <ArrowRight className="h-4 w-4" />
                   </Link>

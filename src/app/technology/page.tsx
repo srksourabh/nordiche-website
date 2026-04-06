@@ -1,7 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/Card";
+import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { ENERGY_STORAGE_HIGHLIGHTS, TECH_PILLARS } from "@/lib/constants";
+import { EnergyFlowAnimation } from "@/components/visuals/EnergyFlowAnimation";
+import { BatteryChargingAnimation } from "@/components/visuals/BatteryChargingAnimation";
+import { ENERGY_STORAGE_HIGHLIGHTS, TECH_PILLARS, TECHNOLOGY_VERTICALS } from "@/lib/constants";
+import { TECH_IMAGE_MAP } from "@/lib/imagery";
 import { buildMetadata } from "@/lib/metadata";
 import { getIcon } from "@/lib/utils";
 
@@ -15,21 +21,51 @@ export const metadata = buildMetadata({
 export default function TechnologyPage() {
   return (
     <div>
-      <section className="border-b border-[var(--color-nord-slate)] bg-[var(--color-nord-deep)] py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-nord-teal)]">Technology</p>
-          <h1 className="mt-4 text-5xl uppercase sm:text-6xl">Advanced Battery Technology</h1>
-          <p className="mt-6 max-w-3xl text-lg text-[var(--color-nord-mist)]">
-            Performance starts long before pack assembly. It begins with chemistry choice, thermal pathways,
-            firmware logic, and the practical storage-story emphasis that customers now expect to see clearly:
-            safer materials, stronger charge behavior, and energy storage options that suit real infrastructure.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        label="Technology"
+        title="Advanced Battery Technology"
+        description="Performance starts long before pack assembly. It begins with chemistry choice, thermal pathways, firmware logic, and energy storage options that suit real infrastructure."
+        image="/images/tech-aluminium-graphene.png"
+      />
 
       <section className="py-[var(--section-py)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeader title="Six Engineering Pillars" />
+          <SectionHeader title="Five Technology Verticals" description="From energy storage to material science — our R&D spans the full spectrum of sustainable energy technology." />
+          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-5">
+            {TECHNOLOGY_VERTICALS.map((tech) => {
+              const TechIcon = getIcon(tech.icon);
+              const techImage = TECH_IMAGE_MAP[tech.slug as keyof typeof TECH_IMAGE_MAP];
+              return (
+                <Card key={tech.slug} className="group overflow-hidden p-0">
+                  {techImage ? (
+                    <div className="relative h-40 overflow-hidden">
+                      <Image
+                        alt={tech.name}
+                        className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        fill
+                        src={techImage}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-nord-deep)] to-transparent" />
+                    </div>
+                  ) : null}
+                  <div className="p-5">
+                    <TechIcon className="h-7 w-7 text-[var(--color-nord-teal)]" />
+                    <h3 className="mt-3 text-xl uppercase">{tech.name}</h3>
+                    <p className="mt-2 text-xs text-[var(--color-nord-mist)]">{tech.tagline}</p>
+                    <Link
+                      aria-label={`Explore ${tech.name}`}
+                      className="mt-4 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-nord-teal)]"
+                      href={`/technology/${tech.slug}`}
+                    >
+                      Explore <ArrowRight className="h-3 w-3" />
+                    </Link>
+                  </div>
+                </Card>
+              );
+            })}
+          </div>
+
+          <SectionHeader className="mt-20" title="Six Engineering Pillars" />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {TECH_PILLARS.map((pillar) => {
               const Icon = getIcon(pillar.icon);
@@ -53,16 +89,7 @@ export default function TechnologyPage() {
                 Kalman-filter SOC estimation, SOH forecasting, and event logging support smarter charging strategies,
                 warranty analysis, and fleet-level optimization.
               </p>
-              <div className="mt-6 rounded-2xl border border-[var(--color-nord-slate)] p-6">
-                <div className="grid gap-4 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
-                  <div className="rounded-2xl border border-[var(--color-nord-slate)] p-4 text-center">Cell Array</div>
-                  <div className="font-[var(--font-mono)] text-center text-[var(--color-nord-teal)]">48 monitored parameters</div>
-                  <div className="rounded-2xl border border-[var(--color-nord-slate)] p-4 text-center">Nordische BMS</div>
-                </div>
-                <div className="mt-4 rounded-2xl border border-dashed border-[var(--color-nord-teal)] p-4 text-center font-[var(--font-mono)] text-sm text-[var(--color-nord-teal)]">
-                  CAN 2.0B / CANopen / Modbus / RS485 / Optional cloud telemetry
-                </div>
-              </div>
+              <EnergyFlowAnimation className="mt-6 h-56" />
             </Card>
 
             <Card className="p-8">
@@ -93,15 +120,15 @@ export default function TechnologyPage() {
             <Card className="p-8">
               <h2 className="text-4xl uppercase">Energy Storage Platforms</h2>
               <p className="mt-4 text-[var(--color-nord-light)]">
-                The reference site strongly emphasizes differentiated storage chemistry. We now surface that same
-                message here with clearer focus on aluminium-graphene and lead ultra-carbon platforms.
+                Beyond conventional lithium, Nordische develops two differentiated storage chemistries designed
+                for safety, recyclability, and long-term cost advantage: aluminium-graphene and lead ultra-carbon.
               </p>
               <div className="mt-6 overflow-hidden rounded-2xl border border-[var(--color-nord-slate)]">
                 <Image
-                  alt="Energy storage platform comparison graphic"
+                  alt="Aluminium-graphene battery technology"
                   className="h-auto w-full"
                   height={720}
-                  src="/graphics/energy-storage-platforms.svg"
+                  src={TECH_IMAGE_MAP["energy-storage"]}
                   width={960}
                 />
               </div>
@@ -156,25 +183,28 @@ export default function TechnologyPage() {
               </p>
             </Card>
 
-            <Card className="p-8">
-              <h2 className="text-4xl uppercase">Our R&amp;D Investment</h2>
-              <p className="mt-4 text-[var(--color-nord-light)]">
-                We allocate 12% of annual revenue to research and validation. That funds in-house thermal chambers,
-                vibration rigs, firmware benches, and accelerated aging campaigns that de-risk client deployments.
-              </p>
-              <ul className="mt-6 space-y-3 text-sm text-[var(--color-nord-light)]">
-                <li>• In-house testing and prototyping</li>
-                <li>• Rapid firmware iteration on NXP and STM32 platforms</li>
-                <li>• Patent portfolio focused on integration and thermal control</li>
-              </ul>
-              <a
-                aria-label="Talk to Nordische Energy engineers"
-                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-nord-teal)]"
-                href="/contact"
-              >
-                Talk to Our Engineers
-              </a>
-            </Card>
+            <div className="space-y-6">
+              <BatteryChargingAnimation />
+              <Card className="p-8">
+                <h2 className="text-4xl uppercase">Our R&amp;D Investment</h2>
+                <p className="mt-4 text-[var(--color-nord-light)]">
+                  We allocate 12% of annual revenue to research and validation. That funds in-house thermal chambers,
+                  vibration rigs, firmware benches, and accelerated aging campaigns that de-risk client deployments.
+                </p>
+                <ul className="mt-6 space-y-3 text-sm text-[var(--color-nord-light)]">
+                  <li>- In-house testing and prototyping</li>
+                  <li>- Rapid firmware iteration on NXP and STM32 platforms</li>
+                  <li>- Patent portfolio focused on integration and thermal control</li>
+                </ul>
+                <a
+                  aria-label="Talk to Nordische Energy engineers"
+                  className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-nord-teal)]"
+                  href="/contact"
+                >
+                  Talk to Our Engineers
+                </a>
+              </Card>
+            </div>
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import {
   ArrowRight,
+  Atom,
   Award,
   BatteryCharging,
   Bolt,
@@ -11,6 +12,7 @@ import {
   Clock3,
   Cpu,
   Download,
+  Droplets,
   Factory,
   FileText,
   Layers3,
@@ -21,6 +23,7 @@ import {
   Menu,
   MessageCircle,
   Phone,
+  Pickaxe,
   Quote,
   RadioTower,
   RefreshCw,
@@ -71,6 +74,9 @@ const iconMap: Record<string, LucideIcon> = {
   clock: Clock3,
   quote: Quote,
   layers: Layers3,
+  droplets: Droplets,
+  atom: Atom,
+  pickaxe: Pickaxe,
   workflow: Workflow,
   check: Check,
 };

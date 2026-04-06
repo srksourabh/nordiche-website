@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>404 - Page Not Found | CIPET | Central Institute of Petrochemicals Engineering & Technology</title>
+    <meta name="keywords" content="404 - Page Not Found | CIPET | Central Institute of Petrochemicals Engineering & Technology">
+    <meta name="description" content="404 - Page Not Found | CIPET | Central Institute of Petrochemicals Engineering & Technology">
+	
+		
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-H805LYBR18"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H805LYBR18');
+</script>
+
+<link href="https://www.cipet.gov.in/images/favicon.jpg" rel="icon" type="image/icon">
+	<link rel="stylesheet" type="text/css" href="https://www.cipet.gov.in/accd/css/foundation.css">  	
+	<link rel="stylesheet" href="https://www.cipet.gov.in/sidebar/style.css">
+	
+	<link href="https://www.cipet.gov.in/css/bootstrapnew.css" rel="stylesheet">
+	
+    <link href="https://www.cipet.gov.in/css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+
+    
+    <!--[if lt IE 9]>
+      <script src="https://www.cipet.gov.in/js/html5.min.js"></script>
+      <script src="https://www.cipet.gov.in/js/respond.min.js"></script>
+    <![endif]-->
+	
+	<link rel="stylesheet" href="https://www.cipet.gov.in/css/font-awesome-ol.css">
+	<link rel="stylesheet" href="https://www.cipet.gov.in/css/sidebar-menu.css">
+	
+	<link href="https://www.cipet.gov.in/css/home.css" rel="stylesheet">
+	<link href="https://www.cipet.gov.in/css/my-style.css" rel="stylesheet">
+	
+	<link href="https://www.cipet.gov.in/plugins/accordion/accordion.css" rel="stylesheet">
+	
+	<link href="https://www.cipet.gov.in/css/breadcrumb.css" rel="stylesheet">
+        
+
+<style type="text/css">
+body {
+		font-size: 140%;
+	}
+</style>
+
+</head>
+  <body>
+    <noscript>
+	This page is trying to run JavaScript and your browser either does not support JavaScript or you may have turned-off JavaScript. If you have disabled JavaScript on your computer, please turn on JavaScript, to have proper access to this page.
+	</noscript>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 toplinkfleft">
+	<div class="container">
+		<div class="toplinks">  
+		  <div class="toplinkla">
+		  <a href="https://www.cipet.gov.in/index.php" title="Home"><img src="https://www.cipet.gov.in/images/home.png" alt="">&nbsp;Home</a>
+		  <span class="spandivider">|</span>&nbsp;
+		  </div>
+		  <div class="toplinkla">
+		  <a href="#contentStart" title="Skip to main content"><img src="https://www.cipet.gov.in/images/skip-content-icon.gif" alt="">&nbsp;Skip to main content</a>
+		  <span class="spandivider">|</span>&nbsp;
+		  </div>
+		  <div class="toplinkla">
+		  <a href="https://www.cipet.gov.in/screenreaderaccess.php" title="Screen Reader Access"><img src="https://www.cipet.gov.in/images/screen-reader-icon.gif" alt="">&nbsp;Screen Reader Access</a>
+		  <span class="spandivider">|</span>&nbsp;
+		  </div>
+		  <div class="toplinkla">
+		  <a href="https://www.cipet.gov.in/sitemap.php" title="Sitemap"><img src="https://www.cipet.gov.in/images/sitemap-icon.gif" alt="">&nbsp;Sitemap</a>
+		  <span class="spandivider">|</span>&nbsp;
+		  </div>  		  
+		  <div class="toplinkla">
+		  <a href="https://www.cipet.gov.in/search.php" title="Search"><img src="https://www.cipet.gov.in/images/search.gif" alt="">&nbsp;Search</a>    
+		  <span class="spandivider">|</span>&nbsp; 
+		  </div>   
+		  <div class="toplinkla topiconheight" style="padding-left:0px; padding-right:12px;">
+		  <form name="apply" method="POST" action="https://www.cipet.gov.in/404.php">	
+          		   <input type="hidden" name="fontsize" value="decrease">
+		  		   <input type="submit" class="curpoint" value="." title="Decrease font size" style="background:url('https://www.cipet.gov.in/images/textsizeMinus.gif') no-repeat; width:16px; height:13px; border:none; margin-top:4px;">
+		  </form>
+		  </div>
+		  <div class="toplinklapd topiconheight" style="padding-left:0px; padding-right:12px;">
+		  <form name="apply" method="POST" action="https://www.cipet.gov.in/404.php">	  
+		  <input type="hidden" name="fontsize" value="normal">
+		  <input type="submit" class="curpoint" value="." title="Reset font size" style="background:url('https://www.cipet.gov.in/images/textsizeNormal.gif') no-repeat; width:16px; height:13px; border:none; margin-top:4px;">
+		  </form> 
+		  </div>
+		  <div class="toplinklapd topiconheight" style="padding-left:0px; padding-right:12px;">
+		  <form name="apply" method="POST" action="https://www.cipet.gov.in/404.php">		  
+		  		   <input type="hidden" name="fontsize" value="increase">
+		  	  
+		  <input type="submit" class="curpoint" value="." title="Increase font size" style="background:url('https://www.cipet.gov.in/images/textsizePlus.gif') no-repeat; width:16px; height:13px; border:none; margin-top:4px;">
+		  </form>
+		  </div>		  
+		  <div class="toplinklapd topiconheight" style="padding-left:0px; padding-right:12px;">	           		  
+		   <form name="apply" method="POST" action="https://www.cipet.gov.in/404.php">		   
+		   <input type="hidden" name="theme" value="standard">
+		   <input type="submit" class="curpoint" value="." title="Normal Contrast" style="background:url('https://www.cipet.gov.in/images/a-light.gif') no-repeat; width:16px; height:13px; border:none; margin-top:4px;">
+		   </form> 		   
+		  </div>
+		  <div class="toplinklapd topiconheight" style="padding-left:0px; padding-right:0px;">  
+		   <form name="apply" method="POST" action="https://www.cipet.gov.in/404.php">		   
+		   <input type="hidden" name="theme" value="contrast">
+		   <input type="submit" class="curpoint" value="." title="High Contrast" style="background:url('https://www.cipet.gov.in/images/a-dark.gif') no-repeat; width:16px; height:13px; border:none; margin-top:4px;">
+		   </form> 		    
+		  </div>
+		  <div class="toplinkla">
+		  &nbsp; 
+		  <span class="spandivider">|</span>
+		  <a href="https://www.cipet.gov.in/index.php" title="English">English</a>
+		  </div>
+		  <div class="toplinkla">
+		  &nbsp;<span class="spandivider">|</span>
+		  <span lang="hi"><a href="https://www.cipet.gov.in/hi/index.php" title="Hindi"><img src="https://www.cipet.gov.in/images/hindi_vertion.jpg" class="toplinkbh" alt="Hindi"></a></span>  
+		  </div>
+		  <div class="clearfix"></div>
+		</div> 
+ 	  </div>
+	</div>
+	<div class="clearfix"></div>
+	
+	
+	
+    <div class=" navbar navbar-inverse navbar-fixed-top" role="navigation" data-spy="affix" data-offset-top="25">
+	<div class="container"> 	  
+	  <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		  <span class="sr-only">Toggle navigation</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		</button>		
+	  </div>
+		
+	  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 paddinglefterightnone">
+	  <div class="navbar-collapse collapse">
+
+		
+		<ul class="nav navbar-nav" role="menubar">	
+          
+		  <li><img src="https://www.cipet.gov.in/images/cipet-logo-s.jpg" alt="CIPET Logo" title="Central Institute of Petrochemicals Engineering & Technology (CIPET), Department of Chemicals &amp; Petrochemicals,  Ministry of Chemicals &amp; Fertilizers, Government of India" class="img-responsive img-center"></li>
+		  
+		  
+		  <li><a href="#" title="ABOUT US">ABOUT US <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+			  <li><a role="menuitem" href="https://www.cipet.gov.in/aboutus/index.php" title="Overview">Overview</a></li>
+			  <li><a role="menuitem" href="https://www.cipet.gov.in/aboutus/vision-mission.php" title="Vision & Mission">Vision &amp; Mission</a></li>
+			  <li><a role="menuitem" href="https://www.cipet.gov.in/aboutus/objectives.php" title="Objectives">Objectives</a></li>
+			  <li><a role="menuitem" href="https://www.cipet.gov.in/our-team/our-team-organisation-chart.php" title="Organisation Chart">Organisation Chart</a></li>
+			  <li><a role="menuitem" href="https://www.cipet.gov.in/our-team/our-team-dg-profile.php" title="Director General">Director General</a></li>
+			  <li><a role="menuitem" href="https://www.cipet.gov.in/our-team/our-team-head-office.php" title="Our Team - Head Office">Our Team - Head Office</a></li>
+			  <li><a role="menuitem" href="https://www.cipet.gov.in/highlights_of_cipet.php" title="50 Years of Dedicated Services">50 Years of Dedicated Services</a></li>
+			  <li><a role="menuitem" href="https://www.cipet.gov.in/pdfs/ISO_9001_2015_QMS_Cerificate_BIS.pdf" target="_blank" rel="noopener noreferrer" title="CIPET is ISO 9001:2015 - PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">CIPET is ISO 9001:2015&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+			  <li><a role="menuitem" href="https://www.cipet.gov.in/pdfs/QMS_Quality_Policy_2022.pdf" target="_blank" rel="noopener noreferrer" title="QMS Quality Policy - PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">QMS Quality Policy&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+			  <li><a role="menuitem" href="https://www.cipet.gov.in/aboutus/mou.php" title="MoU">MoU</a></li>
+			  <li><a role="menuitem" href="https://www.cipet.gov.in/aboutus/management-whos-who.php" title="Who's Who">Who&apos;s Who</a></li>			
+            </ul>
+          </li>
+		  
+		  <li>
+	      <a href="#" title="CENTRES">THE INSTITUTES <span class="caret"></span></a>
+		  <ul class="dropdown-menu">
+		  <li><a href="#" title="CIPET : IPT">CIPET : IPT <span class="caret"></span></a>
+			<ul class="dropdown-menu">					
+			    <li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-chennai/introduction.php" title="CIPET : IPT - Chennai">CIPET : IPT - Chennai</a></li>
+				<li><a href="#" title="CIPET : IPT - Ahmedabad">CIPET : IPT - Ahmedabad <span class="caret"></span></a>
+				    <ul class="dropdown-menu">
+						<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-ahmedabad/introduction.php" title="CIPET : IPT - Ahmedabad">CIPET : IPT - Ahmedabad</a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-bhavnagar/introduction.php" title="CIPET - Bhavnagar">CIPET - Bhavnagar</a></li>
+					</ul>
+				</li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-lucknow/introduction.php" title="CIPET : IPT - Lucknow">CIPET : IPT - Lucknow</a></li> 
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-bhubaneswar/introduction.php" title="CIPET : IPT - Bhubaneswar">CIPET : IPT - Bhubaneswar</a></li>			
+				<li><a href="#" title="CIPET : IPT - Kochi">CIPET : IPT - Kochi <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-kochi/introduction.php" title="CIPET : IPT - Kochi">CIPET : IPT - Kochi</a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-palakkad/introduction.php" title="CIPET - Palakkad">CIPET - Palakkad</a></li>
+					</ul>
+				</li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-raipur/introduction.php" title="CIPET : IPT - Raipur">CIPET : IPT - Raipur</a></li>					
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-jaipur2/introduction.php" title="CIPET : IPT - Jaipur">CIPET : IPT - Jaipur</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-murthal/introduction.php" title="CIPET : IPT - Murthal">CIPET : IPT - Murthal</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-bihta/introduction.php" title="CIPET : IPT - Bihta">CIPET : IPT - Bihta</a></li>
+			</ul>
+          </li>
+		  
+		  <li><a href="#" title="CIPET : CSTS">CIPET : CSTS <span class="caret"></span></a>
+			<ul class="dropdown-menu">					
+			    <li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-hyderabad/introduction.php" title="CIPET : CSTS - Hyderabad">CIPET : CSTS - Hyderabad</a></li>
+				<li><a href="#" title="CIPET : CSTS - Bhopal">CIPET : CSTS - Bhopal <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-bhopal/introduction.php" title="CIPET : CSTS - Bhopal">CIPET : CSTS - Bhopal</a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-tamot/introduction.php" title="CIPET : APPSEC - Tamot">CIPET : APPSEC - Tamot</a></li>
+					</ul>
+				</li>	
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-imphal/introduction.php" title="CIPET : CSTS - Imphal">CIPET : CSTS - Imphal</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-amritsar/introduction.php" title="CIPET : CSTS - Amritsar">CIPET : CSTS - Amritsar</a></li>				
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-mysuru/introduction.php" title="CIPET : CSTS - Mysuru">CIPET : CSTS - Mysuru</a></li>	
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-hajipur/introduction.php" title="CIPET : CSTS - Hajipur">CIPET : CSTS - Hajipur</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-guwahati/introduction.php" title="CIPET : CSTS - Guwahati">CIPET : CSTS - Guwahati</a></li>	
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-haldia/introduction.php" title="CIPET : CSTS - Haldia">CIPET : CSTS - Haldia</a></li>						
+				<li><a href="#" title="CIPET : CSTS - Bhubaneswar">CIPET : CSTS - Bhubaneswar <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="https://www.cipet.gov.in/centres/cipet-bhubaneswar2/introduction.php" title="CIPET : CSTS - Bhubaneswar">CIPET : CSTS - Bhubaneswar</a></li>
+						<li><a href="https://www.cipet.gov.in/centres/cipet-paradip/introduction.php" title="CIPET : PPEC - Paradip">CIPET : PPEC - Paradip</a></li>
+					</ul>
+				</li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-chhatrapati-sambhajinagar/introduction.php" title="CIPET : CSTS - Chhatrapati Sambhajinagar">CIPET : CSTS - Chhatrapati Sambhajinagar</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-jaipur/introduction.php" title="CIPET : CSTS - Jaipur">CIPET : CSTS - Jaipur</a></li> 				
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-pwmc-guwahati/introduction.php" title="CIPET : CSTS - PWMC - Guwahati">CIPET : CSTS - PWMC - Guwahati</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-madurai/introduction.php" title="CIPET : CSTS - Madurai">CIPET : CSTS - Madurai</a></li>  				
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-balasore/introduction.php" title="CIPET : CSTS - Balasore">CIPET : CSTS - Balasore</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-vijayawada/introduction.php" title="CIPET : CSTS - Vijayawada">CIPET : CSTS - Vijayawada</a></li>	
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-navsari/introduction.php" title="CIPET : CSTS - Navsari">CIPET : CSTS - Navsari</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-baddi/introduction.php" title="CIPET : CSTS - Baddi">CIPET : CSTS - Baddi</a></li>				
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-gwalior/introduction.php" title="CIPET : CSTS - Gwalior">CIPET : CSTS - Gwalior</a></li>  
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-chandrapur/introduction.php" title="CIPET : CSTS - Chandrapur">CIPET : CSTS - Chandrapur</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-agartala/introduction.php" title="CIPET : CSTS - Agartala">CIPET : CSTS - Agartala</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-dehradun/introduction.php" title="CIPET : CSTS - Dehradun">CIPET : CSTS - Dehradun</a></li>				 					
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-ranchi/introduction.php" title="CIPET : CSTS - Ranchi">CIPET : CSTS - Ranchi</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-korba/introduction.php" title="CIPET : CSTS - Korba">CIPET : CSTS - Korba</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-varanasi/introduction.php" title="CIPET : CSTS - Varanasi">CIPET : CSTS - Varanasi</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-bhagalpur/introduction.php" title="CIPET : CSTS - Bhagalpur">CIPET : CSTS - Bhagalpur</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-ayodhya/introduction.php" title="CIPET : CSTS - Ayodhya">CIPET : CSTS - Ayodhya</a></li>
+			 </ul>		
+		  </li>
+		  
+          <li>
+			<a href="#" title="CIPET : SARP">CIPET : SARP <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a role="menuitem" href="http://www.arstps.gov.in/" onclick="openChild(this.href,'win','1'); return false;" target="_blank" rel="noopener noreferrer" title="CIPET : SARP - ARSTPS - Chennai &colon; External Website that opens in a new window">CIPET : SARP - ARSTPS - Chennai&nbsp;<img src="https://www.cipet.gov.in/images/newindow_external.gif" alt="New Window External"></a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-sarp-larpm-bhubaneswar/introduction.php" title="CIPET : SARP - LARPM - Bhubaneswar">CIPET : SARP - LARPM - Bhubaneswar</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-bengaluru/introduction.php" title="CIPET : SARP - APDDRL - Bengaluru">CIPET : SARP - APDDRL - Bengaluru</a></li>
+			</ul> 		
+		  </li>	
+		  
+		  <li>
+			<a href="#" title="CIPET : PWMC">CIPET : PWMC <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-pwmc-bengaluru/introduction.php" title="CIPET : PEWMC - Bengaluru">CIPET : PEWMC - Bengaluru</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-pwmc-bhagalpur/introduction.php" title="CIPET : PWMC - Bhagalpur">CIPET : PWMC - Bhagalpur</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/centres/cipet-pwmc-varanasi/introduction.php" title="CIPET : PWMC - Varanasi">CIPET : PWMC - Varanasi</a></li>
+			</ul> 		
+		  </li>
+		  </ul>
+          </li>	
+
+		  
+		  <li><a href="#" title="ACADEMICS">ACADEMICS<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+			  <li><a role="menuitem" href="https://www.cipet.gov.in/academics/index.php" title="Introduction">Introduction</a></li>
+			  <li><a href="#" title="Ph.D. Programs">Ph.D. Programs <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/phdprograms_overview.php" title="Overview">Overview</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/phdprograms_contact_us.php" title="Contact Us">Contact Us</a></li>		
+				  </ul>
+			  </li>
+			  <li><a href="#" title="UG & PG Programs">UG &amp; PG Programs <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/ugpgprograms_overview.php" title="Overview">Overview</a></li>
+					<li>
+						<a href="#" title="Under Graduate Programs">Under Graduate Programs <span class="caret"></span></a>		
+						<ul class="dropdown-menu">
+							<li>
+								<a role="menuitem" href="https://www.cipet.gov.in/academics/ugpgprograms_ug_pe.php" title="B.E. &sol; B.Tech. &lpar;Plastics Engineering &sol; Technology&rpar;">B.E. &sol; B.Tech. &lpar;Plastics Engineering &sol; Technology&rpar;</a>						
+							</li>
+							<li>
+								<a role="menuitem" href="https://www.cipet.gov.in/academics/ugpgprograms_ug_me.php" title="B.E. &sol; B.Tech. &lpar;Manufacturing Engineering &sol; Technology&rpar;">B.E. &sol; B.Tech. &lpar;Manufacturing Engineering &sol; Technology&rpar;</a>
+							</li>
+							<li>
+								<a role="menuitem" href="https://www.cipet.gov.in/academics/ugpgprograms_ug_mech.php" title="B.Tech. &lpar;Mechanical Engineering&rpar;">B.Tech. &lpar;Mechanical Engineering&rpar;</a>
+							</li>
+							<li>
+								<a role="menuitem" href="https://www.cipet.gov.in/academics/ugpgprograms_ug_pc.php" title="B.Tech. &lpar;Petrochemical Engineering&rpar;">B.Tech. &lpar;Petrochemical Engineering&rpar;</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+					   <a href="#" title="Post Graduate Programs">Post Graduate Programs <span class="caret"></span></a>
+					   <ul class="dropdown-menu">
+							<li>
+								<a role="menuitem" href="https://www.cipet.gov.in/academics/ugpgprograms_pg_pe.php" title="M.E. &sol; M.Tech. &lpar;Plastics Engineering &sol; Technology&rpar;">M.E. &sol; M.Tech. &lpar;Plastics Engineering &sol; Technology&rpar;</a>						
+							</li>
+							<li>
+								<a role="menuitem" href="https://www.cipet.gov.in/academics/ugpgprograms_pg_pnt.php" title="M.Tech. &lpar;Polymer Nano-Technology&rpar;">M.Tech. &lpar;Polymer Nano-Technology&rpar;</a>
+							</li>
+							<li>
+								<a role="menuitem" href="https://www.cipet.gov.in/academics/ugpgprograms_pg_cadcam.php" title="M.E. &lpar;CAD&sol;CAM&rpar;">M.E. &lpar;CAD&sol;CAM&rpar;</a>
+							</li>
+							<li>
+								<a role="menuitem" href="https://www.cipet.gov.in/academics/ugpgprograms_pg_msctech_mse.php" title="M.Sc. Tech. &lpar;Material Science &amp; Engineering&rpar;">M.Sc. Tech. &lpar;Material Science &amp; Engineering&rpar;</a>
+							</li>
+							<li>
+								<a role="menuitem" href="https://www.cipet.gov.in/academics/ugpgprograms_pg_msc_bps.php" title="M.Sc. &lpar;Bio-Polymer Science&rpar;">M.Sc. &lpar;Bio-Polymer Science&rpar;</a>
+							</li>
+							<li>
+								<a role="menuitem" href="https://www.cipet.gov.in/academics/ugpgprograms_pg_msc_ps.php" title="M.Sc. &lpar;Polymer Science&rpar;">M.Sc. &lpar;Polymer Science&rpar;</a>
+							</li>
+							<li>
+								<a role="menuitem" href="https://www.cipet.gov.in/academics/ugpgprograms_pg_msc_engg.php" title="M.Sc. &lpar;Engg.&rpar; by Research in the Faculty of Engineering">M.Sc. &lpar;Engg.&rpar; by Research in the Faculty of Engineering</a>
+							</li>
+							<li>
+								<a role="menuitem" href="https://www.cipet.gov.in/academics/ugpgprograms_pg_msc_aps.php" title="M.Sc. &lpar;Applied Polymer Science&rpar;">M.Sc. &lpar;Applied Polymer Science&rpar;</a>
+							</li>
+						</ul>
+					</li>					
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/ugpgprograms_contact_us.php" title="Contact Us">Contact Us</a></li>					
+				  </ul>
+			  </li>
+			  <li><a href="#" title="Diploma Programs">Diploma Programs <span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/diplomaprograms_overview.php" title="Overview">Overview</a></li>
+					<li><a href="#" title="Diploma Programs">Diploma Programs <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a role="menuitem" href="https://www.cipet.gov.in/academics/diplomaprograms_dpt.php" title="Diploma in Plastics Technology">Diploma in Plastics Technology</a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/academics/diplomaprograms_dpmt.php" title="Diploma in Plastics Mould Technology">Diploma in Plastics Mould Technology</a></li>							
+					</ul>
+					</li>
+					<li><a href="#" title="Post Diploma Program">Post Diploma Program <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a role="menuitem" href="https://www.cipet.gov.in/academics/diplomaprograms_pdpmd.php" title="Post Diploma in Plastics Mould Design with CAD&sol;CAM">Post Diploma in Plastics Mould Design with CAD&sol;CAM</a>						
+						</li>						
+					</ul>
+					</li>
+					<li><a href="#" title="Postgraduate Diploma Programs">Postgraduate Diploma Programs <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a role="menuitem" href="https://www.cipet.gov.in/academics/diplomaprograms_pgdppt.php" title="Postgraduate Diploma in Plastics Processing &amp; Testing">Postgraduate Diploma in Plastics Processing &amp; Testing</a></li>
+					</ul>
+					</li>					
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/diplomaprograms_fees_structure.php" title="Fees Structure">Fees Structure</a></li>	
+					<li><a href="#" title="Syllabus">Syllabus <span class="caret"></span></a>
+					<ul class="dropdown-menu">												
+						<li>
+							<a role="menuitem" href="https://www.cipet.gov.in/academics/syllabus/04-04-2025/DPT_2023.pdf" target="_blank" rel="noopener noreferrer" title="Diploma in Plastics Technology (2023-24) : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Diploma in Plastics Technology (2023-24)&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a>						
+						</li>
+						<li>
+							<a role="menuitem" href="https://www.cipet.gov.in/academics/syllabus/04-04-2025/DPMT_2023.pdf" target="_blank" rel="noopener noreferrer" title="Diploma in Plastics Mould Technology (2023-24) : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Diploma in Plastics Mould Technology (2023-24)&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a>						
+						</li>
+						<li>
+							<a role="menuitem" href="https://www.cipet.gov.in/academics/syllabus/04-04-2025/DPT_2018.pdf" target="_blank" rel="noopener noreferrer" title="Diploma in Plastics Technology (2018-19) : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Diploma in Plastics Technology (2018-19)&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a>						
+						</li>
+						<li>
+							<a role="menuitem" href="https://www.cipet.gov.in/academics/syllabus/04-04-2025/DPMT_2018.pdf" target="_blank" rel="noopener noreferrer" title="Diploma in Plastics Mould Technology (2018-19) : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Diploma in Plastics Mould Technology (2018-19)&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a>						
+						</li>
+					</ul>
+					</li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/Academic_Schedule_2025-26.pdf" target="_blank" rel="noopener noreferrer" title="Academic Schedule for Odd / Even Semester 2025-26 : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Academic Schedule for Odd / Even Semester 2025-26&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+					<li><a href="#" title="Standard Operating Procedure">Standard Operating Procedure (SOP) <span class="caret"></span></a>
+					<ul class="dropdown-menu">												
+						<li><a role="menuitem" href="https://www.cipet.gov.in/academics/Handbook.pdf" target="_blank" rel="noopener noreferrer" title="Post Graduate Diploma / Post Diploma / Diploma Courses : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Post Graduate Diploma / Post Diploma / Diploma Courses &nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/academics/SOP_CONDUCT_OF_SEM_SUPP_EXAM_DIP_LEVEL_PROGS.pdf" target="_blank" rel="noopener noreferrer" title="Conduct of Semester/Supplementary examination : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Conduct of Semester/Supplementary examination&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/academics/SOP_ATTENDANCE.pdf" target="_blank" rel="noopener noreferrer" title="Mandatory Attendance requirement for appearing in the Semester Examination : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Mandatory Attendance requirement for appearing in the Semester Examination&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/academics/SoP_for_Scholarship.pdf" target="_blank" rel="noopener noreferrer" title="Grant of Scholarships to meritorious students : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Grant of Scholarships to meritorious students&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+					</ul>
+					</li>
+					
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/diplomaprograms_semester_exam_question_paper.php" title="Semester Examinations Previous Year Question Papers">Semester Examinations Previous Year Question Papers</a></li>
+					
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/diplomaprograms_contact_us.php" title="Contact Us">Contact Us</a></li>
+				</ul>				
+			</li>							
+			<li>
+				<a href="#" title="Admission Procedure">Admission Procedure <span class="caret"></span></a>				
+				<ul class="dropdown-menu">
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/admissions_phdprograms.php" title="Ph.D Programs">Ph.D Programs</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/admissions_ugpg_programs.php" title="UG &amp; PG Programs">UG &amp; PG Programs</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/admissions_diploma_programs.php" title="Diploma Programs">Diploma Programs</a></li>						
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/admissions_faq_ugpg_programs.php" title="FAQ&apos;s - UG &amp; PG Programs">FAQ&apos;s - UG &amp; PG Programs</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/admissions_faq_diploma_programs.php" title="FAQ&apos;s - Diploma Programs">FAQ&apos;s - Diploma Programs</a></li>
+					<li>
+						<a href="#" title="Contact Us">Contact Us<span class="caret"></span></a>		
+						<ul class="dropdown-menu">
+							<li><a role="menuitem" href="https://www.cipet.gov.in/academics/admissions_contact_us_phdprograms.php" title="Ph.D. Programs">Ph.D. Programs</a></li>
+							<li><a role="menuitem" href="https://www.cipet.gov.in/academics/admissions_contact_us_ugpgprograms.php" title="UG &amp; PG Programs">UG &amp; PG Programs</a></li>
+							<li><a role="menuitem" href="https://www.cipet.gov.in/academics/admissions_contact_us_diplomaprograms.php" title="Diploma Programs">Diploma Programs</a></li>														
+						</ul>
+					</li>
+				</ul>	
+			</li>
+			<li><a role="menuitem" href="https://www.cipet.gov.in/academics/iqac.php" title="Internal Quality Assurance Cell (IQAC)">Internal Quality Assurance Cell (IQAC)</a></li>
+			
+			<li>
+				<a href="#" title="Placement">Placement <span class="caret"></span></a>				
+				<ul class="dropdown-menu">
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/placement.php" title="Overview">Overview</a></li>					
+				</ul>	
+			</li>
+			<li>
+				<a href="#" title="CIPET Students / Faculty / Stakeholders etc., Grievance Redressal Portal">CIPET Students / Faculty / Stakeholders etc., Grievance Redressal Portal&nbsp;<span class="caret"></span></a>				
+				<ul class="dropdown-menu">
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/CIPET-SGRC.pdf" target="_blank" rel="noopener noreferrer" title="Overview : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Overview &nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/students_grievance_registration_form.php" title="Grievance Registration Form">Grievance Registration Form</a></li>
+				</ul>	
+			</li>
+			<li>
+				<a href="#" title="Facilities">Facilities <span class="caret"></span></a>				
+				<ul class="dropdown-menu">
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/facilities_video_conference.php" title="Video Conference">Video Conference</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/facilities_auditorium.php" title="Auditorium">Auditorium</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/facilities_conference_hall.php" title="Conference Halls">Conference Halls</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/facilities_cafeteria.php" title="Cafeteria">Cafeteria</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/facilities_hostel.php" title="Hostel">Hostel</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/facilities_library.php" title="Library">Library</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/facilities_beyond_curriculum.php" title="Beyond Curriculum">Beyond Curriculum</a></li>
+				</ul>	
+			</li>
+			<li>
+				<a href="#" title="Students">Students <span class="caret"></span></a>				
+				<ul class="dropdown-menu">							
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/students_arts_culture.php" title="Arts and Culture">Arts and Culture</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/students_anti_ragging.php" title="Anti Ragging">Anti Ragging</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/pdfs/CIPET_Student_Clubs.pdf" target="_blank" rel="noopener noreferrer" title="Students Club : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Students Club&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/Wellness_Committees.pdf" target="_blank" rel="noopener noreferrer" title="Students' Wellness Committee : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Students' Wellness Committee&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+				</ul>	
+			</li>	
+			<li>
+				<a href="#" title="AICTE Feedback">AICTE Feedback <span class="caret"></span></a>				
+				<ul class="dropdown-menu">							
+					<li><a role="menuitem" href="https://www.aicte-india.org/feedback/students.php" onclick="openChild(this.href,'win','1'); return false;" target="_blank" rel="noopener noreferrer" title="Students &colon; External Website that opens in a new window">Students&nbsp;<img src="https://www.cipet.gov.in/images/newindow_external.gif" alt="New Window External"></a></li>
+					<li><a role="menuitem" href="https://www.aicte-india.org/feedback/faculty.php" onclick="openChild(this.href,'win','1'); return false;" target="_blank" rel="noopener noreferrer" title="Faculty &colon; External Website that opens in a new window">Faculty&nbsp;<img src="https://www.cipet.gov.in/images/newindow_external.gif" alt="New Window External"></a></li>
+				</ul>	
+			</li>
+			<li><a role="menuitem" href="https://www.cipet.gov.in/academics/Hostel_Rules_and_Regulations.pdf" target="_blank" rel="noopener noreferrer" title="Hostel Rules &amp; Regulations : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Hostel Rules &amp; Regulations&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+			<li><a role="menuitem" href="https://www.cipet.gov.in/academics/diploma_semester_exam_results.php" title="Exam Results">Exam Results</a></li>
+			<li><a role="menuitem" href="https://www.cipet.gov.in/academics/Education_Verification.pdf" target="_blank" rel="noopener noreferrer" title="Education Verification Certificate : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Education Verification Certificate&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+			<li><a role="menuitem" href="https://www.cipet.gov.in/academics/CIPET_Rename_Gazette_Notification_2021.pdf" target="_blank" rel="noopener noreferrer" title="CIPET Renaming Gazette Notification : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">CIPET Renaming Gazette Notification&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+		    <li><a role="menuitem" href="https://www.cipet.gov.in/helpdesk/helpdesk-academics.php" title="Help Desk">Help Desk</a></li>
+		   </ul>
+		  </li>
+		  
+		  		
+		  <li><a href="#" title="SKILL TRAINING">SKILL TRAINING<span class="caret"></span></a>				
+				<ul class="dropdown-menu">
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/vocational-training-program_overview.php" title="Overview">Overview</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/vocational-training-program_objective.php" title="Core Values & Objectives">Core Values &amp; Objectives</a></li>
+					<li><a href="#" title="Skill Development Training Programs">Skill Development Training Programs <span class="caret"></span></a>
+					  <ul class="dropdown-menu"> 
+					   <li><a role="menuitem" href="https://www.cipet.gov.in/academics/skill/nsqf_aligned_cipet_courses_approved_by_ncvet.pdf" target="_blank" rel="noopener noreferrer" title="CIPET Qualifications / Courses (NSQF Aligned) approved by NCVET: PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">CIPET Qualifications / Courses (NSQF Aligned) approved by NCVET&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+					   <li><a role="menuitem" href="https://www.cipet.gov.in/academics/vocational-training-program_course_offered.php" title="Supporting Government Organization / Agencies / PSUs">Supporting Government Organizations / Agencies / PSUs</a></li>
+					   <li><a role="menuitem" href="https://www.cipet.gov.in/academics/skill/Centre_wise_SD_Contact_details.pdf" target="_blank" rel="noopener noreferrer" title="Centre wise Contact Details for Skill Development Training Program : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Centre wise Contact Details for Skill Development Training Program&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+					  </ul>
+					</li>					
+			  		<li><a role="menuitem" href="https://www.cipet.gov.in/academics/admissions_vocational_training_programs.php" title="Admission Procedure">Admission Procedure</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/admissions_faq_sdt_programs.php" title="FAQ's - Skill Development Training Programs">FAQ&apos;s - Skill Development Training Programs</a></li>						
+					<li><a role="menuitem" href="https://www.cipet.gov.in/academics/vocational-training-program_contact_us.php" title="Contact Us">Contact Us</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/helpdesk/helpdesk-skill.php" title="Help Desk">Help Desk</a></li>
+				</ul>	
+			</li>
+			
+			<li><a href="#" title="SERVICES">SERVICES<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a role="menuitem" href="https://www.cipet.gov.in/technology/index.php" title="Introduction">Introduction</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/technology/processing.php" title="Processing">Processing</a></li>
+					<li><a role="button" href="https://www.cipet.gov.in/technology/testing.php" title="Testing">Testing <span class="caret"></span></a>
+					  <ul class="dropdown-menu"> 
+					   <li><a role="menuitem" href="https://www.cipet.gov.in/technology/testing.php" title="Overview">Overview</a></li>
+					   <li><a role="menuitem" href="https://testing.cipet.gov.in/tsspipetesting/dashboard.php" title="Dashboard - PIPE Testing Facilities Availability Status" target="_blank" rel="noopener noreferrer">Dashboard - PIPE Testing Facilities Availability Status</a></li>
+					   <li><a role="menuitem" href="https://testing.cipet.gov.in/tsspipetesting/dashboard_biode.php" title="Dashboard - Bio Degradability Testing Facilities Availability Status" target="_blank" rel="noopener noreferrer">Dashboard - Bio Degradability Testing Facilities Availability Status</a></li>
+					   <li><a role="menuitem" href="https://testing.cipet.gov.in/tsspipetesting/dashboard_uvw.php" title="Dashboard - UV-Weatherometer Testing Facilities Availability Status" target="_blank" rel="noopener noreferrer">Dashboard - UV-Weatherometer Testing Facilities Availability Status</a></li>
+					   </ul>
+					</li>
+					<li><a role="button" href="https://www.cipet.gov.in/technology/inspection.php" title="Inspection">Inspection <span class="caret"></span></a>
+					   <ul class="dropdown-menu">
+						<li><a role="menuitem" href="https://www.cipet.gov.in/technology/inspection.php" title="Overview">Overview</a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/technology/CIPET_NABCB_Certificate.pdf" target="_blank" rel="noopener noreferrer" title="NABCB Accreditation Certificate : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">NABCB Accreditation Certificate&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/technology/Management_Policy_Statement.pdf" target="_blank" rel="noopener noreferrer" title="Management Policy Statement : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Management Policy Statement&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/technology/Quality_Policy.pdf" target="_blank" rel="noopener noreferrer" title="Quality Policy : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">Quality Policy&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/technology/inspection-pdi-format.php" title="PDI Formats - Download">PDI Formats - Download</a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/technology/pdi/pdi_registration.php" title="PDI Registration Form for Manufacturer / Industry">PDI Registration Form for Manufacturer / Industry</a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/technology/inspection-requestforinspection.php" title="Request for Inspection">Request for Inspection</a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/technology/verify-inspection-report.php" title="To Verify the Inspection Report">To Verify the Inspection Report</a></li>
+						<li><a role="menuitem" href="https://pdireport.cipet.gov.in/index.php" target="_blank" rel="noopener noreferrer" title="Download PDI Report">Download PDI Report</a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/technology/inspection-contacts.php" title="Contact Information">Contact Information</a></li>
+					   </ul>
+					</li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/technology/calibration.php" title="Calibration">Calibration</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/technology/design-cad-cam-cae.php" title="Design/CAD/CAM/CAE">Design&sol;CAD&sol;CAM&sol;CAE</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/technology/toolroom.php" title="Tool Room">Tool Room</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/technology/consultancy-assignments.php" title="Consultancy Assignments">Consultancy Assignments</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/technology/industry-institute-interface.php" title="Institute - Industry Interface">Institute - Industry Interface</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/technology/NABL_NABCB_Accreditation.pdf" target="_blank" rel="noopener noreferrer" title="NABL & NABCB Accreditation Applied by and Issued to : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">NABL &amp; NABCB Accreditation Applied by and Issued to&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/technology/TSS_Brochure.pdf" target="_blank" rel="noopener noreferrer" title="e-Brochure : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">e-Brochure&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/technology/technology-contactus.php" title="Contact Us">Contact Us</a></li>
+					<li><a role="menuitem" href="https://www.cipet.gov.in/helpdesk/helpdesk-technical-services.php" title="Help Desk">Help Desk</a></li>
+				</ul>		
+			</li>
+			
+			
+			<li><a href="#" title="ACCREDITATION">ACCREDITATION<span class="caret"></span></a>
+			    <ul class="dropdown-menu"> 
+				   <li><a role="menuitem" href="https://www.cipet.gov.in/accreditation/index.php" title="NABL Accreditated Test Facilities">NABL Accreditated Test Facilities</a></li>
+				   <li><a role="menuitem" href="https://www.cipet.gov.in/accreditation/nabl_accredited_calibration_facilities.php" title="NABL Accreditated Calibration Facilities">NABL Accreditated Calibration Facilities</a></li>
+				   <li><a role="menuitem" href="https://www.cipet.gov.in/accreditation/bis_accredited_test_facilities.php" title="BIS Accreditated Test Facilities">BIS Accreditated Test Facilities</a></li>
+				</ul>
+			</li>
+		  
+						
+		  
+		  <li><a href="#" title="RESEARCH">RESEARCH <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a role="menuitem" href="https://www.cipet.gov.in/research/index.php" title="Introduction">Introduction</a></li>
+			    <li><a role="menuitem" href="https://www.cipet.gov.in/research/RnD_Brochure.pdf" target="_blank" rel="noopener noreferrer" title="e-Brochure : PDF file that opens in a new window. To know how to open PDF file refer Help section located at bottom of the site.">e-Brochure&nbsp;<img src="https://www.cipet.gov.in/images/pdf_icon.gif" alt="PDF File"><img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+			    <li><a role="menuitem" href="https://www.cipet.gov.in/research/list_of_publications.php" title="Publications">Publications</a></li>
+			    <li><a href="#" title="Patents">Patents <span class="caret"></span></a>
+				    <ul class="dropdown-menu">
+						<li><a role="menuitem" href="https://www.cipet.gov.in/research/list_of_patents_granted.php">Granted</a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/research/list_of_patents_filed.php">Filed</a></li>
+					</ul>
+				</li>
+				<li><a href="#" title="Technology">Technology <span class="caret"></span></a>
+				    <ul class="dropdown-menu">
+						<li><a role="menuitem" href="https://www.cipet.gov.in/research/developed_and_transferred.php">Developed and Transferred</a></li>
+						<li><a role="menuitem" href="https://www.cipet.gov.in/research/available_for_transfer.php">Available for Transfer</a></li>
+					</ul>
+				</li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/research/faq_on_research_and_development_activities.php" title="FAQ's on Research & Development Activities">FAQ&apos;s on Research &amp; Development Activities</a></li>
+				<li><a role="menuitem" href="https://www.cipet.gov.in/helpdesk/helpdesk-research-development.php" title="Help Desk">Help Desk</a></li>
+			</ul>		
+		  </li>		
+
+		  <li><a href="#" title="MEDIA">MEDIA<span class="caret"></span></a>
+			<ul class="dropdown-menu"> 
+			   <li><a role="menuitem" href="https://www.cipet.gov.in/newsletter.php" title="E-Newsletter">E-Newsletter</a></li>			   
+			</ul>
+		  </li>	
+		  
+		  <li><a role="menuitem" href="https://alumni.cipet.gov.in/" title="ALUMNI" target="_blank" rel="noopener noreferrer">ALUMNI</a></li>
+		  
+		</ul>		
+	  </div>
+	  </div>
+	</div>
+	</div>
+	
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 moblogo">
+	  <img src="https://www.cipet.gov.in/images/new/cipet-logo-2-new.jpg" alt="CIPET Logo" title="Central Institute of Petrochemicals Engineering & Technology (CIPET), Department of Chemicals &amp; Petrochemicals,  Ministry of Chemicals &amp; Fertilizers, Government of India" class="img-responsive img-center cipetlogobor">	  
+	</div>	
+	<div class="clearfix"></div>
+	
+	
+	<header>
+	<div id="logo-top-main-inner">		
+		<img src="https://www.cipet.gov.in/images/new/top-banner-1.jpg" alt="CIPET Top Banner" class="img-responsive img-center">
+	</div>	
+	</header>
+	
+	<div id="contentStart"></div>
+	
+	<main>
+	<div class="contbg">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 paddinglefterightnone pageloc">
+	    <nav aria-label="Breadcrumb" class="breadcrumb container">
+		  <ol>
+			<li>
+			  <a href="https://www.cipet.gov.in/index.php">
+				Home
+			  </a>
+			</li>						
+			<li>
+			  <a href="" aria-current="page">
+				404 - Page Not Found
+			  </a>
+			</li>
+		  </ol>
+		</nav>
+	</div>
+	<div class="clearfix"></div>
+	<div>	
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 paddinglefterightnone">		  
+		  <div class="container">
+		  <div class="topbannerbottombackgroundinner">
+		    <span class="glyphicon glyphicon-print"></span>&nbsp;<a href="javascript:window.print();" title="Print">Print</a>
+		  </div>
+		  </div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	
+	<div class="container">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 paddinglefterightnone">		
+		<h1>ERROR PAGE</h1>
+		<p class="maincontentsubpagecontentp">							
+		  404 - Page Not Found
+		  <br><br>
+		</p>
+		<div class="clearfix"></div>
+		<br>
+	</div> 
+	</div>
+	</div>
+	<div class="clearfix"></div>
+	
+	
+	
+	
+	<div class="pageupdateinner">
+	<div class="container">
+	   <div class="padinpglu">
+		  <span class="pageupdatecontent">
+		  Page last updated on&colon; 09-10-2025		  </span>
+		</div>
+	</div>
+	</div>
+	</main>
+	
+	    <div>
+	    <div class="col-md-12 col-lg-12 footerbgcolor paddinglefterightnone">			
+		   <div>			    
+				<footer>
+				<div class="fottercontpad" style="padding-left:15px; padding-right:15px;">
+				  	<div class="col-sm-3 col-md-3 col-xs-12 col-lg-3">
+					  <div class="footer-links">
+						<span class="contentheading12">INFORMATION</span>						
+						<div>
+						 <br>
+						 <ul class="list-links list-unstyled fotterlitxt">
+							<li><a href="https://www.cipet.gov.in/index.php" title="Home">Home</a></li>							
+							<li><a href="https://www.cipet.gov.in/help.php" title="Help">Help</a></li>
+							<li><a href="https://www.cipet.gov.in/sitemap.php" title="Sitemap">Sitemap</a></li>							
+							<li><a href="https://www.cipet.gov.in/feedback.php" title="Feedback">Feedback</a></li>
+							<li><a href="https://www.cipet.gov.in/centres/index.php" title="CIPET Centres in Google Map">CIPET Centres in Google Map</a> </li>
+							<li><a href="https://www.cipet.gov.in/accessibilityoptions.php" title="Accessibility Options">Accessibility Options</a></li>
+							<li><a href="https://www.cipet.gov.in/accessibilitystatement.php" title="Accessibility Statement">Accessibility Statement</a></li>
+						  </ul>
+						</div>
+					  </div>
+					</div>
+				  
+					<div class="col-sm-3 col-md-3 col-xs-12 col-lg-3">
+					  <div class="footer-links">
+					    <span class="contentheading12">POLICIES</span> 
+						<div class="tabBlock">
+						  <br>
+						  <ul class="list-links list-unstyled fotterlitxt">
+							<li><a href="https://www.cipet.gov.in/hyperlinkingpolicy.php" title="Hyperlinking Policy">Hyperlinking Policy</a></li>							
+							<li><a href="https://www.cipet.gov.in/privacypolicy.php" title="Privacy Policy">Privacy Policy</a></li>
+							<li><a href="https://www.cipet.gov.in/copyrightpolicy.php" title="Copyright Policy">Copyright Policy</a></li>
+							<li><a href="https://www.cipet.gov.in/other_policies.php" title="Other Policies">Other Policies</a></li>								
+							<li><a href="https://www.cipet.gov.in/termsandconditions.php" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+							<li><a href="https://www.cipet.gov.in/national-policy-on-petrochemicals.php" title="National Policy on Petrochemicals">National Policy on Petrochemicals</a></li>
+							<li><a href="https://www.cipet.gov.in/pcpir_policy.php" title="PCPIR Policy">PCPIR Policy</a></li>
+						  </ul>
+						</div>
+					  </div>
+					</div>
+					<div class="col-sm-3 col-md-3 col-xs-12 col-lg-3">
+					  <div class="footer-links">
+					    <span class="contentheading12">QUICK ACCESS</span>
+						<div class="tabBlock">
+						  <br>						 
+						  <ul class="list-links list-unstyled fotterlitxt">
+							<li><a href="https://mail.gov.in/" target="_blank" rel="noopener noreferrer" title="Web Mail: External website that opens in a new window">Web Mail&nbsp;<img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+						    <li><a href="https://eoffice.cipet.gov.in" target="_blank" rel="noopener noreferrer" title="eOffice - NKN: External website that opens in a new window">eOffice - NKN</a>&nbsp;|&nbsp;<a href="https://saccess.nic.in/" target="_blank" rel="noopener noreferrer" title="eOffice - VPN">eOffice - VPN</a>&nbsp;<img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></li>
+						    <li><a href="https://sparrow.cipet.gov.in" target="_blank" rel="noopener noreferrer" title="Sparrow - NKN: External website that opens in a new window">Sparrow - NKN</a>&nbsp;|&nbsp;<a href="https://saccess.nic.in/" target="_blank" rel="noopener noreferrer" title="Sparrow - VPN">Sparrow - VPN</a>&nbsp;<img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></li>
+						    <li><a href="https://e-hrms.gov.in/login" target="_blank" rel="noopener noreferrer" title="e-HRMS: External website that opens in a new window">e-HRMS&nbsp;<img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+							<li><a href="https://alumni.cipet.gov.in/" target="_blank" rel="noopener noreferrer" title="Alumni Website">Alumni Website&nbsp;<img src="https://www.cipet.gov.in/images/newindow_icon.gif" alt="New Window"></a></li>
+						    <li><a href="https://www.cipet.gov.in/cipet-video/index.php" title="Video Gallery">Video Gallery</a></li>
+							<li><a href="https://www.cipet.gov.in/newsletter.php" title="Subscribe to our Newsletter">Subscribe to our E-Newsletter</a></li>
+ 						   </ul>
+						</div>
+					  </div>
+					</div>	
+					 <div class="col-sm-3 col-md-3 col-xs-12 col-lg-3">
+					  <div class="footer-links">
+					    <span class="contentheading12">CONTACT US</span>
+						<div class="tabBlock">
+						  <br>						 
+						  <ul class="list-links list-unstyled fotterlitxt">
+						    <li><a href="https://www.cipet.gov.in/contact_at_headoffice.php" title="Contact at Head Office">Contact at Head Office</a></li>
+							<li><a href="https://www.cipet.gov.in/contact_at_centres.php" title="Contact at Centres">Contact at Centres</a></li>
+							<li><a href="https://www.cipet.gov.in/one_number_for_all_your_queries.php" title="One Number for All Your Queries">One Number for All Your Queries</a></li>
+							<li><a href="https://www.cipet.gov.in/wim.php" title="Web Information Manager">Web Information Manager</a></li>
+						  </ul>						  
+						</div>
+					  </div>
+					</div>	
+					<div class="clearfix"></div>	
+				</div>
+				</footer>				
+				<div class="clearfix"></div>	
+				
+				<div class="footercopyright">
+				<div style="padding-left:15px; padding-right:15px;">
+				<div class="col-sm-9 col-md-9 col-xs-12 col-lg-9 paddinglefterightnone">
+				<p class="footerlinkliscon footercontent">
+				&copy; Content Owned by Central Institute of Petrochemicals Engineering &amp; Technology &lpar;CIPET&rpar;.  All rights reserved. 
+				</p>
+				<div class="clearfix"></div>	 
+				<p class="footerlinkliscond footercontent">
+				Designed, Developed and Maintained by Central Institute of Petrochemicals Engineering &amp; Technology &lpar;CIPET&rpar;.
+				</p>				
+				</div>
+				<div class="col-sm-1 col-md-1 col-xs-12 col-lg-1 paddinglefterightnone">
+				<div class="footerlinklisconscoial">
+				  <a title="Website Quality Certificate" href="https://www.cipet.gov.in/pdfs/Website_Quality_Certificate.pdf" target="_blank" rel="noopener noreferrer"><img src="https://www.cipet.gov.in/images/cqw_logo.png" alt="Website Quality Certificate" class="img-responsive img-center"></a>
+                </div>
+				</div>
+				<div class="col-sm-2 col-md-2 col-xs-12 col-lg-2 paddinglefterightnone">
+				<div class="footerlinklisconscoial">
+				  <a title="Facebook Page &colon; External website that opens in a new window" href="https://www.facebook.com/cipethoweb" onclick="openChild(this.href,'win','1'); return false;" target="_blank" rel="noopener noreferrer"><img src="https://www.cipet.gov.in/images/new/facebook.png" alt="Facebook Page &colon; External website that opens in a new window" class="footerlinklisconscoialhw"></a>
+                  &nbsp;&nbsp;
+				  <a title="Twitter Page &colon; External website that opens in a new window" href="https://twitter.com/CIPETHO" onclick="openChild(this.href,'win','1'); return false;" target="_blank" rel="noopener noreferrer"><img src="https://www.cipet.gov.in/images/new/twitter.png" alt="Twitter Page &colon; External website that opens in a new window" class="footerlinklisconscoialhw"></a>  
+				  &nbsp;&nbsp;
+				  <a title="Youtube Page &colon; External website that opens in a new window" href="https://www.youtube.com/channel/UCRPRTNgLYZAJfLGtqup6jbQ" onclick="openChild(this.href,'win','1'); return false;" target="_blank" rel="noopener noreferrer"><img src="https://www.cipet.gov.in/images/new/youtube.png" alt="Youtube Page &colon; External website that opens in a new window" class="footerlinklisconscoialhw"></a> 
+				</div>
+				</div>
+				<div class="clearfix"></div>
+				</div>
+				</div>
+			</div>
+			
+			
+         </div>
+	</div>
+	
+	<script type="text/javascript" src="https://www.cipet.gov.in/js/openchild.js"></script>
+	
+	<script type="text/javascript" src="https://www.cipet.gov.in/js/openchild_vid.js"></script>
+	
+    <script src="https://www.cipet.gov.in/js/jqminl.js"></script>
+    
+    <script src="https://www.cipet.gov.in/js/200124/bootstrap.min.js"></script>
+			
+	<script type="text/javascript" src="https://www.cipet.gov.in/js/jquery.smartmenus.js?v=2"></script>
+	
+	<script type="text/javascript" src="https://www.cipet.gov.in/js/jquery.smartmenus.bootstrap.js?v=2"></script>
+	
+	<script type="text/javascript">
+	$(function () {
+		$('#myCarousel').carousel({
+			interval:9000,
+			pause: "false"
+		});
+		$('#playButton').click(function () {
+			$('#myCarousel').carousel('cycle');
+		});
+		$('#pauseButton').click(function () {
+			$('#myCarousel').carousel('pause');
+		});
+	});
+	
+	$(function () {
+		$('#myCarouseltoplogo').carousel({
+			interval:9000,
+			pause: "false"
+		});
+		$('#playButtontoplogo').click(function () {
+			$('#myCarouseltoplogo').carousel('cycle');
+		});
+		$('#pauseButtontoplogo').click(function () {
+			$('#myCarouseltoplogo').carousel('pause');
+		});
+	});
+	
+	$(function () {
+		$('#myCarouseltopmiddle').carousel({
+			interval:9000,
+			pause: "false"
+		});
+		$('#playButtontopmiddle').click(function () {
+			$('#myCarouseltopmiddle').carousel('cycle');
+		});
+		$('#pauseButtontopmiddle').click(function () {
+			$('#myCarouseltopmiddle').carousel('pause');
+		});
+	});
+	
+	
+	$(function () {
+		$('#myCarouselmiddle').carousel({
+			interval:9000,
+			pause: "false"
+		});
+		$('#playButtonmiddle').click(function () {
+			$('#myCarouselmiddle').carousel('cycle');
+		});
+		$('#pauseButtonmiddle').click(function () {
+			$('#myCarouselmiddle').carousel('pause');
+		});
+	});
+	
+	$(function () {
+		$('#myCarouselbot').carousel({
+			interval:5000,
+			pause: "false"
+		});
+		$('#playButtonbot').click(function () {
+			$('#myCarouselbot').carousel('cycle');
+		});
+		$('#pauseButtonbot').click(function () {
+			$('#myCarouselbot').carousel('pause');
+		});
+	});
+	</script>
+	
+	
+	<script src="https://www.cipet.gov.in/js/jquery.Scroller.js" type="text/javascript"></script>  
+	<script type="text/javascript">
+		$(document).ready(function () {			
+			//create scroller for each element with "horizontal_scroller" class...
+			$('.horizontal_scroller').SetScroller({ velocity: 40,
+				direction: 'horizontal',
+				startfrom: 'right',
+				loop: 'infinite',
+				movetype: 'linear',
+				onmouseover: 'pause',
+				click: 'plays',
+				onmouseout: 'plays',
+				onstartup: 'plays',
+				cursor: 'pointer'
+			});
+
+			
+
+			$('#scrollercontrol').SetScroller({ velocity: 40, direction: 'vertical', startfrom: 'bottom' });
+
+			//if you need to remove the scrolling animation, uncomment the following line...
+			
+
+			//how to plays or stop scrolling animation outside the scroller...
+			$('#play_scrollercontrol').click(function news() {				
+				$('#a11').css({ overflow: 'hidden' });
+				$('.horizontal_scroller').css({ overflow: 'hidden' });
+				$('#horizontal_scroller').PlayScroller();
+			});
+			$('#stop_scrollercontrol').click(function news() {				
+				$('#a11').css({ overflow: 'scroll' });
+				$('.horizontal_scroller').css({ overflow: 'scroll' });
+				$('#horizontal_scroller').PauseScroller();
+			});
+
+			$('#A11').click(function news() {
+				$('.vertical_scroller').css({ overflow: 'hidden' });
+				$('#scrollercontrol').PlayScroller();
+			});
+			$('#A22').click(function news() {
+				$('.vertical_scroller').css({ overflow: 'scroll' });
+				$('#scrollercontrol').PauseScroller();
+			});
+
+		});
+	</script>
+			
+	<script src="https://www.cipet.gov.in/js/sidebar-menu.js"></script>
+    <script>
+	  $.sidebarMenu($('.sidebar-menu'))
+    </script>
+         	
+	<script>
+          // JQuery function for equal height divs
+			function equalHeight(group) {
+				var tallest = 0;
+				group.each(function() {
+					var thisHeight = $(this).height();                                      
+					if(thisHeight > tallest) {
+						tallest = thisHeight;
+					}
+				});
+				group.height(tallest);
+			}   
+
+			// Set the divs to have the height equaliser applied to them. 
+			equalHeight($('.equalColumns'));
+	</script>
+
+    <script>
+          // JQuery function for equal height divs
+			function equalHeight1(group) {
+				var tallest = 0;
+				group.each(function() {
+					var thisHeight = $(this).height();                                      
+					if(thisHeight > tallest) {
+						tallest = thisHeight;
+					}
+				});
+				group.height(tallest);
+			}   
+
+			// Set the divs to have the height equaliser applied to them. 
+			equalHeight1($('.equalColumns1'));
+	</script>
+
+    <script>
+          // JQuery function for equal height divs
+			function equalHeight2(group) {
+				var tallest = 0;
+				group.each(function() {
+					var thisHeight = $(this).height();                                      
+					if(thisHeight > tallest) {
+						tallest = thisHeight;
+					}
+				});
+				group.height(tallest);
+			}   
+
+			// Set the divs to have the height equaliser applied to them. 
+			equalHeight2($('.equalColumns2'));
+	</script>	
+	
+    <script type="text/javascript" src="https://www.cipet.gov.in/arrow_top/arrow79.js"></script>  
+	
+	<script src="https://www.cipet.gov.in/plugins/accordion/accordion-faq.js"></script> 
+	
+</body>
+</html>

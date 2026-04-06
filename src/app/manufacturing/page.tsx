@@ -1,6 +1,9 @@
+import Image from "next/image";
 import { Card } from "@/components/ui/Card";
+import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { MANUFACTURING_CONTENT } from "@/lib/constants";
+import { MANUFACTURING_IMAGE } from "@/lib/imagery";
 import { buildMetadata } from "@/lib/metadata";
 
 export const metadata = buildMetadata({
@@ -13,13 +16,12 @@ export const metadata = buildMetadata({
 export default function ManufacturingPage() {
   return (
     <div>
-      <section className="border-b border-[var(--color-nord-slate)] bg-[var(--color-nord-deep)] py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--color-nord-teal)]">Manufacturing</p>
-          <h1 className="mt-4 text-5xl uppercase sm:text-6xl">Precision Manufacturing &amp; Rigorous Testing</h1>
-          <p className="mt-6 max-w-3xl text-lg text-[var(--color-nord-mist)]">{MANUFACTURING_CONTENT.subheadline}</p>
-        </div>
-      </section>
+      <PageHero
+        label="Manufacturing"
+        title="Precision Manufacturing & Rigorous Testing"
+        description={MANUFACTURING_CONTENT.subheadline}
+        image={MANUFACTURING_IMAGE}
+      />
 
       <section className="py-[var(--section-py)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -37,7 +39,16 @@ export default function ManufacturingPage() {
             ))}
           </div>
 
-          <p className="mt-12 max-w-4xl text-lg text-[var(--color-nord-light)]">{MANUFACTURING_CONTENT.intro}</p>
+          <div className="mt-12 overflow-hidden rounded-[2rem] border border-[var(--color-nord-slate)]">
+            <Image
+              alt="Nordische Energy manufacturing facility"
+              className="h-80 w-full object-cover"
+              height={480}
+              src={MANUFACTURING_IMAGE}
+              width={1280}
+            />
+          </div>
+          <p className="mt-8 max-w-4xl text-lg text-[var(--color-nord-light)]">{MANUFACTURING_CONTENT.intro}</p>
 
           <SectionHeader className="mt-18" title="Capabilities" />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

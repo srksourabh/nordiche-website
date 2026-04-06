@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://nordische-energy.com",
+  siteUrl: "https://nordischeenergy.com",
   generateRobotsTxt: false,
   generateIndexSitemap: false,
   changefreq: "monthly",

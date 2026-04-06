@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -5,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Card } from "@/components/ui/Card";
 import { INDUSTRIES, PRODUCTS, CASE_STUDIES } from "@/lib/constants";
+import { INDUSTRY_IMAGE_MAP } from "@/lib/imagery";
 import { buildMetadata } from "@/lib/metadata";
 import { getIcon } from "@/lib/utils";
 
@@ -54,6 +56,17 @@ export default async function IndustryPage({
     <div className="py-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industries" }, { label: industry.name }]} />
+        {INDUSTRY_IMAGE_MAP[industry.slug as keyof typeof INDUSTRY_IMAGE_MAP] ? (
+          <div className="mb-10 overflow-hidden rounded-[2rem] border border-[var(--color-nord-slate)]">
+            <Image
+              alt={industry.name}
+              className="h-72 w-full object-cover"
+              height={432}
+              src={INDUSTRY_IMAGE_MAP[industry.slug as keyof typeof INDUSTRY_IMAGE_MAP]}
+              width={1280}
+            />
+          </div>
+        ) : null}
         <Icon className="h-12 w-12 text-[var(--color-nord-teal)]" />
         <h1 className="mt-5 text-5xl uppercase sm:text-6xl">{industry.name}</h1>
         <p className="mt-4 text-lg uppercase tracking-[0.16em] text-[var(--color-nord-teal)]">{industry.headline}</p>
@@ -90,7 +103,7 @@ export default async function IndustryPage({
               <Link
                 aria-label={`Open ${product.name}`}
                 className="mt-5 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--color-nord-teal)]"
-                href={`/products/${product.slug}`}
+                href={`/products#${product.slug}`}
               >
                 View Product <ArrowRight className="h-4 w-4" />
               </Link>
