@@ -3,404 +3,495 @@
 import { motion } from "framer-motion";
 
 /**
- * SVG world map showing NES partner locations with animated
- * connection arcs from Bangalore (HQ) to each partner country.
+ * Dot-matrix world map using a 120×60 equirectangular grid.
+ * Each cell = 3° longitude × 3° latitude.
+ * Land cells = "1", ocean cells = "0".
  *
- * Continent paths are derived from Natural Earth simplified data,
- * projected onto a 1000×500 equirectangular (plate carrée) viewBox.
- * Coordinate mapping: x = (lon + 180) / 360 * 1000, y = (90 - lat) / 180 * 500
+ * Partner coordinates use equirectangular projection:
+ *   px = (lon + 180) / 360 * mapWidth
+ *   py = (90 - lat) / 180 * mapHeight
  */
 
-const HQ = { x: 715, y: 215, label: "Bangalore", sub: "HQ" };
-
-const PARTNERS = [
-  { x: 715, y: 215, label: "India", sub: "Bangalore" },
-  { x: 537, y: 104, label: "Germany", sub: "Berlin" },
-  { x: 491, y: 138, label: "Spain", sub: "Madrid" },
-  { x: 514, y: 104, label: "Holland", sub: "Amsterdam" },
-  { x: 500, y: 107, label: "UK", sub: "London" },
-  { x: 183, y: 149, label: "USA", sub: "Las Vegas" },
+// ---------------------------------------------------------------------------
+// 120×60 world land mask (3°/cell equirectangular, row 0 = 90°N)
+// Generated from a simplified land polygon dataset.
+// Each string is one row of 120 characters.
+// ---------------------------------------------------------------------------
+const MAP_ROWS: string[] = [
+  // Row 0 — 90°N (Arctic)
+  "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  // Row 1 — 87°N
+  "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  // Row 2 — 84°N
+  "000000000000011000000000000000000000000000000000000000000001111100000000000000000000000000000000000000000000000000000000",
+  // Row 3 — 81°N
+  "000000000000111100000000000000000000000000000000001111111111111110000000000000000000000000000000000000000000000000000000",
+  // Row 4 — 78°N (Greenland, Svalbard, N Canada)
+  "000000011111111100000000000000000011111000000000011111111111111110000000000000000000000000000000000000000000000000000000",
+  // Row 5 — 75°N
+  "000001111111111110000000000000001111111100000000111111111111111110000000000000000000000000000000000000000000000000000000",
+  // Row 6 — 72°N
+  "000011111111111111000000000000011111111110000011111111111111111111000000000000000000000000000000000000000000000000000000",
+  // Row 7 — 69°N (Greenland, N Canada, N Russia)
+  "000111111111111111100000000000111111111110000111111111111111111111000001111111111111111111000000000000000000000000000000",
+  // Row 8 — 66°N
+  "000111111111111111100000000011111111111111011111111111111111111111100111111111111111111111111000000000000000000000000000",
+  // Row 9 — 63°N (Alaska, Canada, Scandinavia, Russia)
+  "011111111111111111100000000111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000",
+  // Row 10 — 60°N
+  "011111111111111111000000001111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000",
+  // Row 11 — 57°N
+  "011111111111111110000000011111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000",
+  // Row 12 — 54°N (UK, N Europe, Russia, Canada)
+  "001111111111111100000000111111111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000",
+  // Row 13 — 51°N (UK, C Europe, Russia)
+  "001111111111111000000001111110111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000",
+  // Row 14 — 48°N (France, C Europe, Russia, Canada/USA border)
+  "001111111111100000000011111001111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000",
+  // Row 15 — 45°N (N USA, S Europe, Russia/Mongolia, Japan)
+  "001111111111100000000111110001111111111111111111111111111111111111111111111111111111111111111000000000000001100000000000",
+  // Row 16 — 42°N
+  "001111111111110000011111100001111111111111111111111111111111111111111111111111111111111111100000000000000011100000000000",
+  // Row 17 — 39°N (USA, Spain, Turkey, China, Japan/Korea)
+  "001111111111111001111111000001111111111111111111111111111111111111111111111111111111111110000000000000001111100000000000",
+  // Row 18 — 36°N (USA, Mediterranean, Middle East, China)
+  "001111111111111111111110000001111101111111111101111111111111111111111111111111111111110000000000000000111111000000000000",
+  // Row 19 — 33°N
+  "000111111111111111111100000001111001111111111001111111111111111111111111111111111111100000000000000001111110000000000000",
+  // Row 20 — 30°N (Mexico, N Africa, Middle East, India, China)
+  "000111111111111111111000000000111001111111110001011111111111111111111111111111111111000000000000000011111100000000000000",
+  // Row 21 — 27°N
+  "000011111111111111110000000000110001111111100001011111111111111111111111111111111100000000000000000111111000000000000000",
+  // Row 22 — 24°N (Mexico, W Africa, Arabia, India, SE Asia)
+  "000011111111111111100000000000100001111111100001011111111111111111111111111111111100000000000001001111110000000000000000",
+  // Row 23 — 21°N
+  "000001111111111111100000000000000001111111100001011111111111111111111111111111100100000000001111111111000000000000000000",
+  // Row 24 — 18°N (Mexico/C.Am., W Africa, India, SE Asia)
+  "000001111111111111100000000000000001111111000001011111111111111111111111111111001000000000011111111110000000000000000000",
+  // Row 25 — 15°N
+  "000000111111111111100000000000000001111111000001111111111111111111111111111110000000000001111111111000000000000000000000",
+  // Row 26 — 12°N (Bangalore at row 26, col 86)
+  "000000011111111111000000000000000001111111000001111111111111111111111111111100000000000011111111110000000000000000000000",
+  // Row 27 — 9°N
+  "000000011111111111000000000000000001111110000001111111111111111111111111111100000000000001111111100000000000000000000000",
+  // Row 28 — 6°N (C. America, W Africa, SE Asia)
+  "000000001111111110000000000000000001111110000001111111111111111111111111111000000000001101111111000000000000000000000000",
+  // Row 29 — 3°N
+  "000000001111111110000000000000000001111100000001111111111111111111111111110000000000001111111100000000000000000000000000",
+  // Row 30 — 0° (Equator: S. America, W Africa, SE Asia, Borneo)
+  "000000000111111110000000000000000001111100000001111111111111111111111111100000000000011111111000000000000000000000000000",
+  // Row 31 — 3°S
+  "000000000111111100000000000000000001111100000001111111111111111111111111000000000000111111110000000000000000000000000000",
+  // Row 32 — 6°S (S. America, Africa narrows, SE Asia, Sulawesi)
+  "000000000111111100000000000000000001111100000001111111111111111111111000000000000001111111100000000000000000000000000000",
+  // Row 33 — 9°S
+  "000000000111111000000000000000000001111000000001111111111111111111000000000000000011111111000000000000000000000000000000",
+  // Row 34 — 12°S (S. America, Africa, N Australia hint)
+  "000000000111111000000000000000000001111000000001111111111111111100000000000000001011111100000000000000000000000000000000",
+  // Row 35 — 15°S
+  "000000000011110000000000000000000001111000000001111111111111111000000000000000001111111000000000000000000000000000000000",
+  // Row 36 — 18°S (S. America, Africa, N Australia)
+  "000000000011110000000000000000000001110000000001111111111111100000000000000001001111110000000000000000000000000000000000",
+  // Row 37 — 21°S
+  "000000000011110000000000000000000001110000000001111111111111000000000000000001111111110000000000000000000000000000000000",
+  // Row 38 — 24°S (S. America, Africa, C Australia)
+  "000000000001110000000000000000000001100000000001111111111100000000000000000001111111110000000000000000000000000000000000",
+  // Row 39 — 27°S
+  "000000000001110000000000000000000000000000000001111111111000000000000000000001111111110000000000000000000000000000000000",
+  // Row 40 — 30°S (S. America, S Africa, Australia)
+  "000000000001110000000000000000000000000000000001111111110000000000000000000001111111100000000000000000000000000000000000",
+  // Row 41 — 33°S
+  "000000000000110000000000000000000000000000000001111111100000000000000000000001111111000000000000000000000000000000000000",
+  // Row 42 — 36°S (S tip of S. America, S Africa, SE Australia)
+  "000000000000110000000000000000000000000000000001111111000000000000000000000001111111000000000000000000000000000000000000",
+  // Row 43 — 39°S
+  "000000000000100000000000000000000000000000000000111110000000000000000000000001111100000000000000000000000000000000000000",
+  // Row 44 — 42°S (Patagonia, New Zealand hint)
+  "000000000000100000000000000000000000000000000000011100000000000000000000000001111000000000000000000001100000000000000000",
+  // Row 45 — 45°S
+  "000000000000100000000000000000000000000000000000000000000000000000000000000000110000000000000000000001110000000000000000",
+  // Row 46 — 48°S
+  "000000000000000000000000000000000000000000000000000000000000000000000000000000110000000000000000000000110000000000000000",
+  // Row 47 — 51°S
+  "000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000010000000000000000",
+  // Row 48 — 54°S (Tierra del Fuego)
+  "000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  // Row 49 — 57°S
+  "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  // Row 50 — 60°S
+  "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  // Row 51 — 63°S (Antarctica starts)
+  "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  // Row 52 — 66°S
+  "000000000001111111111111100000000000111111111111111111111100000000000000000000000000000000000000000000000000000000000000",
+  // Row 53 — 69°S
+  "000000001111111111111111111000011111111111111111111111111111110000000000000000000000000000000000000000000000000000000000",
+  // Row 54 — 72°S
+  "000000111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000",
+  // Row 55 — 75°S
+  "000011111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000",
+  // Row 56 — 78°S
+  "001111111111111111111111111111111111111111111111111111111111111111110000000000000000000000000000000000000000000000000000",
+  // Row 57 — 81°S
+  "011111111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000000000000000",
+  // Row 58 — 84°S
+  "111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000",
+  // Row 59 — 87°S (South Pole)
+  "111111111111111111111111111111111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000",
 ];
 
-function ArcPath({ from, to, delay }: { from: { x: number; y: number }; to: { x: number; y: number }; delay: number }) {
+const COLS = 120;
+const ROWS = 60;
+
+// SVG viewport dimensions
+const MAP_W = 960;
+const MAP_H = 480;
+const DOT_R = 2.6;
+const CELL_W = MAP_W / COLS; // 8px per cell
+const CELL_H = MAP_H / ROWS; // 8px per cell
+
+// ---------------------------------------------------------------------------
+// Partner/HQ coordinates — equirectangular projection
+//   px = (lon + 180) / 360 * MAP_W
+//   py = (90 - lat) / 180 * MAP_H
+// ---------------------------------------------------------------------------
+function lonLatToXY(lon: number, lat: number): { x: number; y: number } {
+  return {
+    x: ((lon + 180) / 360) * MAP_W,
+    y: ((90 - lat) / 180) * MAP_H,
+  };
+}
+
+const HQ_COORDS = lonLatToXY(77.59, 12.97); // Bangalore
+
+interface Location {
+  label: string;
+  sub: string;
+  lon: number;
+  lat: number;
+  isHQ?: boolean;
+}
+
+const LOCATIONS: Location[] = [
+  { label: "India", sub: "Bangalore", lon: 77.59, lat: 12.97, isHQ: true },
+  { label: "Germany", sub: "Berlin", lon: 13.4, lat: 52.52 },
+  { label: "Spain", sub: "Madrid", lon: -3.7, lat: 40.42 },
+  { label: "Holland", sub: "Amsterdam", lon: 4.9, lat: 52.37 },
+  { label: "UK", sub: "London", lon: -0.12, lat: 51.51 },
+  { label: "USA", sub: "Las Vegas", lon: -115.14, lat: 36.17 },
+];
+
+const LOCATION_POINTS = LOCATIONS.map((loc) => ({
+  ...loc,
+  ...lonLatToXY(loc.lon, loc.lat),
+}));
+
+// ---------------------------------------------------------------------------
+// Animated arc from HQ to each partner
+// ---------------------------------------------------------------------------
+interface ArcPathProps {
+  from: { x: number; y: number };
+  to: { x: number; y: number };
+  delay: number;
+}
+
+function ArcPath({ from, to, delay }: ArcPathProps) {
+  const dx = to.x - from.x;
+  const dy = to.y - from.y;
+  const dist = Math.sqrt(dx * dx + dy * dy);
+  // Control point: midpoint lifted upward by a fraction of the distance
   const midX = (from.x + to.x) / 2;
-  const midY = Math.min(from.y, to.y) - Math.abs(from.x - to.x) * 0.15 - 30;
+  const midY = (from.y + to.y) / 2 - dist * 0.28;
   const d = `M ${from.x} ${from.y} Q ${midX} ${midY} ${to.x} ${to.y}`;
 
   return (
     <g>
-      <path d={d} fill="none" stroke="rgb(0 212 170 / 0.15)" strokeWidth="1.5" />
+      {/* Static arc trail */}
+      <path
+        d={d}
+        fill="none"
+        stroke="rgb(0 212 170 / 0.18)"
+        strokeWidth="1"
+        strokeDasharray="4 6"
+      />
+      {/* Moving particle */}
       <motion.circle
-        r="3"
+        r="2.5"
         fill="rgb(0 212 170)"
-        filter="url(#map-glow)"
+        filter="url(#node-glow)"
         animate={{
           cx: [from.x, midX, to.x],
           cy: [from.y, midY, to.y],
+          opacity: [0, 1, 0],
         }}
-        transition={{ duration: 3, delay, repeat: Infinity, ease: "easeInOut" }}
+        transition={{
+          duration: 3.5,
+          delay,
+          repeat: Infinity,
+          ease: "easeInOut",
+          repeatDelay: 0.5,
+        }}
       />
     </g>
   );
 }
 
+// ---------------------------------------------------------------------------
+// Main component
+// ---------------------------------------------------------------------------
 export function GlobalReachMap() {
   return (
     <div className="overflow-hidden rounded-[2rem] border border-[var(--color-nord-slate)] bg-[var(--color-nord-black)]">
       {/* Title bar */}
       <div className="border-b border-[var(--color-nord-slate)] px-6 py-4">
-        <h3 className="font-[var(--font-display)] text-2xl font-bold uppercase text-[var(--color-nord-white)]">
+        <h3
+          className="font-[var(--font-display)] text-2xl font-bold uppercase text-[var(--color-nord-white)]"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
           Global Business Network
         </h3>
-        <p className="text-sm text-[var(--color-nord-teal)]">Bangalore to the World</p>
+        <p className="text-sm text-[var(--color-nord-teal)]">
+          Bangalore to the World
+        </p>
       </div>
 
       <div className="grid lg:grid-cols-[1fr_260px]">
-      {/* Map */}
-      <svg viewBox="0 0 1000 500" className="w-full" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <filter id="map-glow">
-            <feGaussianBlur stdDeviation="3" result="blur" />
-            <feMerge>
-              <feMergeNode in="blur" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-          <radialGradient id="dot-gradient">
-            <stop offset="0%" stopColor="rgb(0 212 170)" />
-            <stop offset="100%" stopColor="rgb(0 212 170 / 0)" />
-          </radialGradient>
-        </defs>
+        {/* ── MAP PANEL ── */}
+        <div className="relative overflow-hidden">
+          {/* Horizontal scan-line sweep */}
+          <motion.div
+            className="pointer-events-none absolute inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-[rgb(0_212_170_/_0.25)] to-transparent"
+            animate={{ top: ["0%", "100%"] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+          />
 
-        {/* Dark ocean background */}
-        <rect width="1000" height="500" fill="#0a0c10" />
-
-        {/* ── CONTINENTS (Natural Earth simplified, equirectangular projection) ── */}
-
-        {/* North America */}
-        <path
-          d="M 72 52 L 83 48 L 100 50 L 114 46 L 128 44 L 145 50 L 152 58
-             L 160 62 L 172 60 L 185 62 L 195 58 L 205 60 L 210 68 L 220 72
-             L 232 76 L 238 85 L 235 95 L 240 105 L 250 110 L 252 120 L 248 130
-             L 258 138 L 262 148 L 258 158 L 252 165 L 245 170 L 235 178 L 228 188
-             L 218 196 L 210 202 L 205 210 L 195 215 L 185 220 L 178 230 L 170 238
-             L 162 242 L 155 248 L 148 256 L 140 262 L 132 268 L 125 265 L 120 258
-             L 115 248 L 108 240 L 100 232 L 95 222 L 88 215 L 82 205 L 76 195
-             L 70 185 L 65 175 L 60 165 L 58 155 L 60 145 L 65 135 L 70 125
-             L 68 115 L 65 105 L 62 95 L 60 85 L 62 75 L 68 65 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Greenland */}
-        <path
-          d="M 280 18 L 295 14 L 312 16 L 325 22 L 330 32 L 325 42 L 315 48
-             L 302 50 L 290 46 L 282 38 L 278 28 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Alaska peninsula */}
-        <path
-          d="M 60 85 L 50 90 L 38 96 L 30 104 L 25 112 L 28 120 L 38 122
-             L 48 118 L 58 112 L 65 105 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Central America & Caribbean isthmus */}
-        <path
-          d="M 210 202 L 215 208 L 218 215 L 222 222 L 225 230 L 222 238
-             L 218 242 L 212 240 L 208 232 L 205 222 L 205 210 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Cuba */}
-        <path
-          d="M 218 198 L 228 195 L 238 196 L 245 200 L 242 205 L 232 207
-             L 220 205 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* South America */}
-        <path
-          d="M 222 242 L 232 238 L 242 235 L 255 232 L 268 232 L 280 235
-             L 290 242 L 298 250 L 302 260 L 305 272 L 308 285 L 310 300
-             L 308 315 L 305 330 L 300 345 L 292 358 L 282 370 L 272 380
-             L 262 388 L 252 392 L 244 388 L 238 378 L 234 365 L 230 350
-             L 226 335 L 222 320 L 218 305 L 215 290 L 215 275 L 218 260
-             L 220 250 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Iceland */}
-        <path
-          d="M 418 72 L 428 68 L 438 70 L 445 76 L 440 84 L 430 86
-             L 420 82 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Great Britain */}
-        <path
-          d="M 490 98 L 496 94 L 503 96 L 507 102 L 505 110 L 500 115
-             L 494 112 L 490 105 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Ireland */}
-        <path
-          d="M 482 102 L 488 99 L 492 104 L 490 110 L 484 112 L 480 108 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Europe (mainland) */}
-        <path
-          d="M 490 98 L 500 94 L 510 92 L 522 90 L 535 90 L 548 93
-             L 558 98 L 565 106 L 568 115 L 565 124 L 558 130 L 552 138
-             L 545 145 L 538 150 L 530 155 L 522 158 L 515 162 L 508 165
-             L 500 168 L 494 172 L 490 178 L 486 185 L 482 192 L 478 198
-             L 480 188 L 478 178 L 474 168 L 470 158 L 468 148 L 470 138
-             L 472 128 L 475 118 L 478 108 L 482 100 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Scandinavia */}
-        <path
-          d="M 510 72 L 518 65 L 528 62 L 538 65 L 545 72 L 548 82
-             L 545 92 L 538 98 L 528 100 L 520 98 L 514 92 L 510 82 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Iberian Peninsula */}
-        <path
-          d="M 468 138 L 478 132 L 488 128 L 498 130 L 505 138 L 505 148
-             L 500 158 L 490 165 L 480 165 L 472 158 L 468 148 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Italy */}
-        <path
-          d="M 520 138 L 528 132 L 535 135 L 538 145 L 535 155 L 530 165
-             L 525 172 L 520 168 L 518 158 L 518 148 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Africa */}
-        <path
-          d="M 478 198 L 488 192 L 498 188 L 510 185 L 522 185 L 535 188
-             L 548 194 L 558 202 L 565 212 L 568 224 L 570 238 L 570 252
-             L 568 268 L 564 284 L 558 300 L 550 315 L 540 330 L 530 344
-             L 518 355 L 506 362 L 495 362 L 485 355 L 476 344 L 469 330
-             L 464 315 L 460 300 L 458 285 L 458 270 L 460 255 L 462 240
-             L 462 225 L 465 212 L 470 202 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Madagascar */}
-        <path
-          d="M 572 318 L 578 312 L 584 316 L 586 326 L 582 336 L 575 338
-             L 571 330 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Russia / Northern Asia */}
-        <path
-          d="M 548 50 L 565 45 L 585 42 L 610 40 L 640 38 L 670 38
-             L 700 40 L 730 42 L 758 45 L 782 50 L 802 55 L 818 62
-             L 828 70 L 830 80 L 825 90 L 815 98 L 800 104 L 782 108
-             L 762 110 L 742 108 L 722 105 L 702 102 L 682 100 L 662 98
-             L 642 98 L 622 100 L 602 104 L 582 108 L 565 112 L 552 116
-             L 542 120 L 535 112 L 530 102 L 532 92 L 538 82 L 544 72
-             L 548 62 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Middle East & Arabian Peninsula */}
-        <path
-          d="M 565 162 L 578 158 L 592 155 L 608 155 L 622 158 L 635 165
-             L 642 175 L 645 188 L 642 202 L 635 215 L 625 228 L 612 238
-             L 598 245 L 585 245 L 575 238 L 568 225 L 565 210 L 565 195
-             L 565 180 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* India subcontinent */}
-        <path
-          d="M 648 165 L 662 160 L 678 158 L 694 162 L 706 170 L 714 182
-             L 718 196 L 718 210 L 715 225 L 710 240 L 702 252 L 692 262
-             L 682 268 L 672 265 L 664 255 L 658 242 L 654 228 L 651 214
-             L 649 200 L 648 185 L 648 172 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Sri Lanka */}
-        <path
-          d="M 698 272 L 703 268 L 707 272 L 706 280 L 700 282 L 696 277 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* China & East Asia */}
-        <path
-          d="M 702 102 L 720 100 L 740 98 L 758 98 L 775 100 L 788 106
-             L 798 115 L 804 126 L 804 138 L 800 150 L 792 160 L 780 168
-             L 768 174 L 755 178 L 742 180 L 728 178 L 715 172 L 704 163
-             L 696 153 L 690 142 L 688 130 L 690 118 L 696 109 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Southeast Asia peninsula */}
-        <path
-          d="M 740 178 L 750 174 L 762 175 L 772 180 L 778 190 L 778 202
-             L 774 214 L 768 224 L 760 232 L 750 238 L 740 238 L 732 232
-             L 728 220 L 728 208 L 732 196 L 736 185 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Malay Peninsula */}
-        <path
-          d="M 762 230 L 768 238 L 770 248 L 768 258 L 762 262 L 756 258
-             L 754 248 L 756 238 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Borneo */}
-        <path
-          d="M 775 238 L 790 230 L 805 232 L 815 242 L 815 258 L 808 268
-             L 795 272 L 782 268 L 774 258 L 772 246 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Sumatra */}
-        <path
-          d="M 726 265 L 742 255 L 758 255 L 770 262 L 772 272 L 762 280
-             L 746 282 L 732 278 L 724 270 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Java */}
-        <path
-          d="M 740 290 L 755 285 L 772 286 L 782 292 L 780 300 L 765 304
-             L 748 302 L 738 296 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Philippines */}
-        <path
-          d="M 810 198 L 818 192 L 825 195 L 828 205 L 824 215 L 815 218
-             L 808 212 L 808 202 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Japan */}
-        <path
-          d="M 835 120 L 842 112 L 850 112 L 855 120 L 852 130 L 844 134
-             L 836 130 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Korean Peninsula */}
-        <path
-          d="M 818 128 L 824 122 L 830 124 L 832 132 L 828 140 L 820 142
-             L 815 136 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* Australia */}
-        <path
-          d="M 800 342 L 820 332 L 845 325 L 870 322 L 895 325 L 916 334
-             L 930 346 L 938 360 L 936 375 L 928 388 L 914 398 L 895 405
-             L 872 408 L 848 405 L 826 396 L 808 382 L 796 366 L 794 350 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* New Zealand (North Island) */}
-        <path
-          d="M 956 388 L 962 380 L 968 382 L 970 392 L 965 400 L 958 398 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* New Zealand (South Island) */}
-        <path
-          d="M 958 405 L 965 400 L 972 404 L 974 415 L 968 422 L 960 420
-             L 956 412 Z"
-          fill="#1c2333" stroke="#2a3549" strokeWidth="0.8"
-        />
-
-        {/* ── GRID LINES ── */}
-        {[100, 200, 300, 400].map((y) => (
-          <line key={`h-${y}`} x1="0" y1={y} x2="1000" y2={y} stroke="rgb(0 212 170 / 0.04)" strokeWidth="0.5" />
-        ))}
-        {[200, 400, 600, 800].map((x) => (
-          <line key={`v-${x}`} x1={x} y1="0" x2={x} y2="500" stroke="rgb(0 212 170 / 0.04)" strokeWidth="0.5" />
-        ))}
-
-        {/* ── CONNECTION ARCS from Bangalore to each partner ── */}
-        {PARTNERS.filter((p) => p.label !== "India").map((partner, i) => (
-          <ArcPath key={partner.label} from={HQ} to={partner} delay={i * 0.6} />
-        ))}
-
-        {/* ── PARTNER LOCATION DOTS ── */}
-        {PARTNERS.map((partner, i) => (
-          <g key={partner.label}>
-            {/* Pulse ring */}
-            <motion.circle
-              cx={partner.x} cy={partner.y}
-              fill="none" stroke="rgb(0 212 170 / 0.3)"
-              animate={{ r: [6, 16, 6], opacity: [0.5, 0, 0.5] }}
-              transition={{ duration: 3, delay: i * 0.4, repeat: Infinity }}
-            />
-            {/* Core dot */}
-            <circle cx={partner.x} cy={partner.y} r="5" fill="rgb(0 212 170)" filter="url(#map-glow)" />
-            {/* Glow halo */}
-            <circle cx={partner.x} cy={partner.y} r="12" fill="url(#dot-gradient)" opacity="0.4" />
-            {/* City label */}
-            <text
-              x={partner.x}
-              y={partner.y - 14}
-              textAnchor="middle"
-              fill="rgb(0 212 170)"
-              fontSize="12"
-              fontFamily="var(--font-display)"
-              fontWeight="700"
-            >
-              {partner.label}
-            </text>
-            <text
-              x={partner.x}
-              y={partner.y + 22}
-              textAnchor="middle"
-              fill="rgb(132 148 176)"
-              fontSize="9"
-              fontFamily="sans-serif"
-            >
-              {partner.sub}
-            </text>
-          </g>
-        ))}
-
-        {/* ── HQ SPECIAL MARKER ── */}
-        <motion.circle
-          cx={HQ.x} cy={HQ.y} r="8"
-          fill="none" stroke="rgb(0 212 170)" strokeWidth="2"
-          animate={{ r: [8, 20, 8], opacity: [0.8, 0, 0.8] }}
-          transition={{ duration: 2.5, repeat: Infinity }}
-        />
-      </svg>
-
-      {/* Country legend panel */}
-      <div className="flex flex-col gap-2 border-t border-[var(--color-nord-slate)] p-4 lg:border-l lg:border-t-0">
-        {PARTNERS.map((partner) => (
-          <div
-            key={partner.label}
-            className="flex items-center gap-3 rounded-xl border border-[var(--color-nord-slate)] bg-[color:rgb(17_21_32_/_0.7)] px-4 py-3"
+          <svg
+            viewBox={`0 0 ${MAP_W} ${MAP_H}`}
+            className="w-full"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <span className="flex h-3 w-3 shrink-0 rounded-full bg-[var(--color-nord-teal)]" />
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--color-nord-white)]">
-                {partner.label}
-              </p>
-              <p className="text-xs text-[var(--color-nord-mist)]">{partner.sub}</p>
+            <defs>
+              <filter id="node-glow" x="-100%" y="-100%" width="300%" height="300%">
+                <feGaussianBlur stdDeviation="4" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+              <filter id="hq-glow" x="-150%" y="-150%" width="400%" height="400%">
+                <feGaussianBlur stdDeviation="6" result="blur" />
+                <feMerge>
+                  <feMergeNode in="blur" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+              <radialGradient id="halo-gradient" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stopColor="rgb(0 212 170)" stopOpacity="0.35" />
+                <stop offset="100%" stopColor="rgb(0 212 170)" stopOpacity="0" />
+              </radialGradient>
+            </defs>
+
+            {/* Ocean background */}
+            <rect width={MAP_W} height={MAP_H} fill="#0a0c10" />
+
+            {/* ── DOT-MATRIX LAND MASK ── */}
+            <g>
+              {MAP_ROWS.map((row, rowIdx) => {
+                const cells = row.split("");
+                return cells.map((cell, colIdx) => {
+                  if (cell !== "1") return null;
+
+                  const cx = colIdx * CELL_W + CELL_W / 2;
+                  const cy = rowIdx * CELL_H + CELL_H / 2;
+
+                  // Check if this dot is near a partner location — make it brighter
+                  const isNearPartner = LOCATION_POINTS.some((p) => {
+                    const dx = cx - p.x;
+                    const dy = cy - p.y;
+                    return Math.sqrt(dx * dx + dy * dy) < 28;
+                  });
+
+                  return (
+                    <circle
+                      key={`${rowIdx}-${colIdx}`}
+                      cx={cx}
+                      cy={cy}
+                      r={DOT_R}
+                      fill={
+                        isNearPartner
+                          ? "rgb(0 212 170 / 0.45)"
+                          : "rgb(0 212 170 / 0.13)"
+                      }
+                    />
+                  );
+                });
+              })}
+            </g>
+
+            {/* ── SUBTLE GRID LINES ── */}
+            {[120, 240, 360, 480, 600, 720, 840].map((x) => (
+              <line
+                key={`v-${x}`}
+                x1={x}
+                y1="0"
+                x2={x}
+                y2={MAP_H}
+                stroke="rgb(0 212 170 / 0.03)"
+                strokeWidth="0.5"
+              />
+            ))}
+            {[96, 192, 288, 384].map((y) => (
+              <line
+                key={`h-${y}`}
+                x1="0"
+                y1={y}
+                x2={MAP_W}
+                y2={y}
+                stroke="rgb(0 212 170 / 0.03)"
+                strokeWidth="0.5"
+              />
+            ))}
+
+            {/* ── CONNECTION ARCS from Bangalore to each partner ── */}
+            {LOCATION_POINTS.filter((p) => !p.isHQ).map((partner, i) => (
+              <ArcPath
+                key={partner.label}
+                from={HQ_COORDS}
+                to={{ x: partner.x, y: partner.y }}
+                delay={i * 0.7}
+              />
+            ))}
+
+            {/* ── PARTNER NODES ── */}
+            {LOCATION_POINTS.map((loc, i) => (
+              <g key={loc.label}>
+                {/* Radial halo */}
+                <circle
+                  cx={loc.x}
+                  cy={loc.y}
+                  r="22"
+                  fill="url(#halo-gradient)"
+                />
+                {/* Pulse ring */}
+                <motion.circle
+                  cx={loc.x}
+                  cy={loc.y}
+                  fill="none"
+                  stroke="rgb(0 212 170 / 0.4)"
+                  strokeWidth="1"
+                  animate={{ r: [6, 20], opacity: [0.6, 0] }}
+                  transition={{
+                    duration: 2.5,
+                    delay: i * 0.45,
+                    repeat: Infinity,
+                    ease: "easeOut",
+                  }}
+                />
+                {/* Core dot */}
+                <circle
+                  cx={loc.x}
+                  cy={loc.y}
+                  r={loc.isHQ ? 6 : 4}
+                  fill="rgb(0 212 170)"
+                  filter={loc.isHQ ? "url(#hq-glow)" : "url(#node-glow)"}
+                />
+                {/* HQ outer ring */}
+                {loc.isHQ && (
+                  <motion.circle
+                    cx={loc.x}
+                    cy={loc.y}
+                    fill="none"
+                    stroke="rgb(0 212 170)"
+                    strokeWidth="1.5"
+                    animate={{ r: [10, 24], opacity: [0.8, 0] }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeOut",
+                    }}
+                  />
+                )}
+                {/* Country label */}
+                <text
+                  x={loc.x}
+                  y={loc.y - 16}
+                  textAnchor="middle"
+                  fill="rgb(0 212 170)"
+                  fontSize="11"
+                  fontWeight="700"
+                  fontFamily="Barlow Condensed, sans-serif"
+                  letterSpacing="1"
+                >
+                  {loc.label.toUpperCase()}
+                </text>
+                {/* City label */}
+                <text
+                  x={loc.x}
+                  y={loc.y + 22}
+                  textAnchor="middle"
+                  fill="rgb(132 148 176)"
+                  fontSize="8.5"
+                  fontFamily="DM Sans, sans-serif"
+                >
+                  {loc.sub}
+                </text>
+              </g>
+            ))}
+          </svg>
+        </div>
+
+        {/* ── LEGEND PANEL ── */}
+        <div className="flex flex-col gap-2 border-t border-[var(--color-nord-slate)] p-4 lg:border-l lg:border-t-0">
+          {LOCATIONS.map((loc) => (
+            <div
+              key={loc.label}
+              className="flex items-center gap-3 rounded-xl border border-[var(--color-nord-slate)] bg-[color:rgb(17_21_32_/_0.7)] px-4 py-3"
+            >
+              <span
+                className="flex h-3 w-3 shrink-0 rounded-full"
+                style={{
+                  background: loc.isHQ
+                    ? "var(--color-nord-teal)"
+                    : "var(--color-nord-teal)",
+                  boxShadow: loc.isHQ
+                    ? "0 0 8px var(--color-nord-teal)"
+                    : "none",
+                }}
+              />
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.1em] text-[var(--color-nord-white)]">
+                  {loc.label}
+                  {loc.isHQ && (
+                    <span className="ml-2 text-[10px] font-normal tracking-wider text-[var(--color-nord-teal)]">
+                      HQ
+                    </span>
+                  )}
+                </p>
+                <p className="text-xs text-[var(--color-nord-mist)]">
+                  {loc.sub}
+                </p>
+              </div>
             </div>
+          ))}
+
+          {/* Tech readout decoration */}
+          <div className="mt-auto border-t border-[var(--color-nord-slate)] pt-3">
+            <p
+              className="text-[10px] text-[var(--color-nord-mist)]"
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              <span className="text-[var(--color-nord-teal)]">SYS</span>{" "}
+              NETWORK ACTIVE
+            </p>
+            <p
+              className="text-[10px] text-[var(--color-nord-mist)]"
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              <span className="text-[var(--color-nord-teal)]">NOD</span>{" "}
+              {LOCATIONS.length} ENDPOINTS
+            </p>
           </div>
-        ))}
-      </div>
+        </div>
       </div>
     </div>
   );
