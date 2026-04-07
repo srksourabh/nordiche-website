@@ -1,4 +1,5 @@
 import { AboutSnapshot } from "@/components/sections/AboutSnapshot";
+import { BlogPreview } from "@/components/sections/BlogPreview";
 import { CaseStudiesPreview } from "@/components/sections/CaseStudiesPreview";
 import { Hero } from "@/components/sections/Hero";
 import { IndustriesGrid } from "@/components/sections/IndustriesGrid";
@@ -35,6 +36,7 @@ export default function HomePage() {
       <IndustriesGrid />
       <ManufacturingStrip />
       <CaseStudiesPreview />
+      <BlogPreview />
       <LeadCapture />
     </>
   );

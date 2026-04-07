@@ -24,12 +24,13 @@
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.54.1",
+    "resend": "^6.10.0",
     "tailwind-merge": "^2.5.5",
     "zod": "^3.24.1"
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.5",
-    "@cloudflare/workers-types": "^4.20241218.0",
+    "@cloudflare/workers-types": "^4.20260405.1",
     "@eslint/eslintrc": "^3.2.0",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/node": "^22.10.2",

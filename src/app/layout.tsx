@@ -26,12 +26,25 @@ const monoFont = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
-export const metadata: Metadata = buildMetadata({
-  title: "Advanced Battery Solutions for Europe",
-  description: SITE.description,
-  path: "/",
-  keywords: ["battery manufacturer germany", "energy storage systems", "telecom battery backup"],
-});
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: "Advanced Battery Solutions for Europe",
+    description: SITE.description,
+    path: "/",
+    keywords: ["battery manufacturer germany", "energy storage systems", "telecom battery backup"],
+  }),
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  manifest: "/site.webmanifest",
+};
 
 export default function RootLayout({
   children,

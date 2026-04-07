@@ -6,7 +6,7 @@ export const SITE = {
   url: "https://nordischeenergy.com",
   whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER
     ? `+${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER.replace(/[^\d]/g, "")}`
-    : "+919986004311",
+    : "+919830425097",
   email: "info@nordischeenergy.com",
   phone: "+91 9986004311",
   phone2: "+91 9830526595",
@@ -32,6 +32,7 @@ export const NAV_LINKS = [
   { label: "Industries", href: "/industries" },
   { label: "Manufacturing", href: "/manufacturing" },
   { label: "Case Studies", href: "/case-studies" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -699,6 +700,7 @@ export const FOOTER_LINKS = {
     { label: "About Us", href: "/about" },
     { label: "Manufacturing", href: "/manufacturing" },
     { label: "Case Studies", href: "/case-studies" },
+    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
   industries: [
@@ -707,6 +709,9 @@ export const FOOTER_LINKS = {
     { label: "Telecom Infrastructure", href: "/industries/telecom-infrastructure" },
     { label: "Industrial Applications", href: "/industries/industrial-applications" },
   ],
+  blog: [
+    { label: "All Articles", href: "/blog" },
+  ],
   legal: [
     { label: "Privacy Policy", href: "/privacy-policy" },
     { label: "Terms of Use", href: "/terms-of-use" },
@@ -714,3 +719,73 @@ export const FOOTER_LINKS = {
     { label: "Cookie Policy", href: "/privacy-policy#cookies" },
   ],
 } as const;
+
+export const BLOG_ARTICLES = [
+  {
+    slug: "aluminium-graphene-battery-future-energy-storage",
+    title: "Why Aluminium-Graphene Batteries Could Replace Lithium-Ion",
+    excerpt:
+      "Lithium-ion batteries dominate the market, but supply chain risks, thermal runaway hazards, and recycling challenges are driving the search for alternatives. Aluminium-graphene technology offers a compelling answer — non-flammable chemistry, 50× faster charging, and over 90% recyclability without rare earth dependencies.",
+    category: "Energy Storage",
+    date: "2025-03-15",
+    readTime: "6 min read",
+    body: [
+      "The global battery market is projected to reach $400 billion by 2030, yet over 75% of current production depends on lithium, cobalt, and nickel — materials concentrated in a handful of geopolitically sensitive regions. As demand accelerates for electric vehicles, grid storage, and consumer electronics, the fragility of this supply chain becomes an existential risk for manufacturers and nations alike.",
+      "Aluminium-graphene batteries represent a fundamental shift in energy storage chemistry. Unlike lithium-ion cells, which rely on intercalation of lithium ions into graphite anodes, aluminium-graphene cells use aluminium as the anode and few-layered graphene as the cathode. The result is a battery that charges up to 50 times faster, operates without thermal runaway risk, and achieves energy densities competitive with commercial lithium-ion at 220 Wh/kg.",
+      "The safety profile is transformative. Traditional lithium-ion cells contain flammable organic electrolytes that can ignite during thermal runaway — a cascading failure mode responsible for warehouse fires, vehicle recalls, and flight bans on damaged devices. Aluminium-graphene cells use ionic liquid electrolytes that are inherently non-flammable. In nail penetration and crush tests, these cells show zero thermal runaway propagation.",
+      "Recyclability is another critical advantage. Over 90% of materials in an aluminium-graphene battery can be recovered and reused, compared to roughly 50% for lithium-ion. Aluminium is the most abundant metal in Earth's crust, and graphene can be produced from natural graphite or biomass sources, eliminating dependence on conflict minerals.",
+      "Nordische Energy Systems has manufactured commercial-grade aluminium-graphene pouch cells tested at CIPET Bangalore and in Spain, demonstrating over 3,000 charge cycles with greater than 97.8% coulombic efficiency. The technology is at manufacturing readiness level TRL 10 — meaning it is not a laboratory concept but a production-validated platform.",
+      "For OEMs and system integrators evaluating next-generation battery platforms, aluminium-graphene technology offers a path to safer, more sustainable, and supply-chain-resilient energy storage. The question is no longer whether this technology works — it is how quickly the industry will adopt it.",
+    ],
+  },
+  {
+    slug: "lead-ultra-carbon-battery-grid-storage",
+    title: "Lead Ultra-Carbon Batteries: The Unsung Hero of Grid Storage",
+    excerpt:
+      "While lithium dominates headlines, enhanced lead-acid batteries with 2D carbonous materials are quietly delivering reliable, cost-effective grid storage at scale. Learn how Lead Ultra-Carbon technology extends cycle life, improves charging speed, and reduces total cost of ownership for utility and telecom operators.",
+    category: "Grid Storage",
+    date: "2025-02-20",
+    readTime: "5 min read",
+    body: [
+      "Grid-scale energy storage does not always need the highest energy density — it needs reliability, low cost, and proven supply chains. While lithium-ion batteries attract venture capital and media attention, a quieter revolution is happening in lead-acid technology. Lead Ultra-Carbon Batteries (LCUB) integrate proprietary 2D engineered carbonous materials into negative plates, creating an electrochemical pseudo-capacitor effect that dramatically extends cycle life and charging speed.",
+      "Traditional lead-acid batteries suffer from sulfation — a progressive buildup of lead sulfate crystals on the negative plate that degrades capacity over time. LCUB technology mitigates sulfation through the carbon additive's high surface area and conductivity, maintaining active material utilization across thousands of cycles. The result is a battery that lasts 2–3× longer than conventional VRLA batteries in partial state-of-charge cycling applications like solar storage and telecom backup.",
+      "Cost is where LCUB technology shines brightest. The levelised cost of storage for LCUB systems is 40–60% lower than lithium-ion for stationary applications where weight and volume are not primary constraints. Lead-acid manufacturing infrastructure exists globally, supply chains are mature, and end-of-life recycling rates exceed 99% — the highest of any battery chemistry.",
+      "Nordische Energy Systems has exported 300 kW of LCUB grid storage solutions to Germany, with an additional 1.5 MW under production. These systems are deployed in telecom backup, solar farm storage, and industrial UPS applications where reliability and total cost of ownership are the primary selection criteria.",
+      "For utility operators and telecom companies evaluating energy storage options, LCUB technology offers a proven, bankable solution that does not require new supply chains, specialised recycling infrastructure, or thermal management systems. It is the pragmatic choice for large-scale deployment today.",
+    ],
+  },
+  {
+    slug: "seawater-mining-green-hydrogen-minerals",
+    title: "Mining the Ocean: How Seawater Extraction Could Solve the Mineral Crisis",
+    excerpt:
+      "Seawater contains virtually every element on the periodic table — including lithium, magnesium, and rare earths critical to the energy transition. Nordische's integrated Sea Water Mining and Green Hydrogen system extracts these minerals while co-producing clean hydrogen, turning desalination waste into a resource.",
+    category: "Green Technology",
+    date: "2025-01-10",
+    readTime: "7 min read",
+    body: [
+      "The energy transition faces a paradox: the technologies needed to decarbonise the economy — batteries, wind turbines, solar panels — require minerals whose extraction often causes significant environmental damage. Lithium mining consumes 2.2 million litres of water per tonne produced. Cobalt mining in the DRC involves well-documented human rights concerns. Rare earth processing generates radioactive waste.",
+      "Seawater contains an estimated 230 billion tonnes of dissolved minerals, including lithium (concentration: 0.17 ppm), magnesium (1,290 ppm), potassium (380 ppm), and trace quantities of virtually every element on the periodic table. The challenge has always been economic — extracting minerals from such dilute concentrations requires enormous energy inputs.",
+      "Nordische Energy Systems has developed an integrated Sea Water Mining (SWM) and Green Hydrogen system that fundamentally changes this calculus. The process uses solar-thermal energy to concentrate seawater, then applies selective extraction membranes to separate target minerals. As a co-product, the system electrolyses the remaining brine to produce green hydrogen at the point of use — eliminating transportation costs and creating a zero-waste circular process.",
+      "The laboratory-grade prototype has successfully demonstrated extraction of lithium, magnesium, and calcium from seawater samples, with the green hydrogen co-production validated independently. The technology roadmap targets pilot-scale deployment by 2026, with commercial systems designed for integration into existing desalination plants.",
+      "For regions dependent on desalination — the Middle East, North Africa, coastal India, and Australia — this technology converts a waste stream (concentrated brine, which is currently dumped back into the ocean causing ecological damage) into a revenue stream. Instead of paying to dispose of brine, operators could sell extracted minerals and hydrogen.",
+      "The strategic implications extend further. Nations currently dependent on China for rare earth processing, or on South America for lithium, could develop domestic mineral supply chains from their own coastlines. Energy security and mineral security converge in a single technology platform.",
+    ],
+  },
+  {
+    slug: "active-materials-graphene-industrial-applications",
+    title: "Beyond Batteries: How Advanced Active Materials Are Transforming Industry",
+    excerpt:
+      "Few-layered graphene, nano-silicon composites, and specialised electrode materials are not just battery components — they are enabling breakthroughs in coatings, composites, electronics, and catalysis. Nordische produces over 30 active material variants for global industrial customers.",
+    category: "Materials Science",
+    date: "2024-12-05",
+    readTime: "5 min read",
+    body: [
+      "When most people hear 'graphene', they think of batteries. But the commercial reality of advanced carbon materials is far broader. Few-layered graphene, carbon nanotubes, nano-silicon composites, and engineered electrode materials are finding applications across coatings, polymer composites, thermal management, water treatment, and catalysis.",
+      "Nordische Energy Systems produces over 30 active material variants at its R&D facility, including few-layered graphene (FLG), graphene oxide (GO), reduced graphene oxide (rGO), carbon nanotubes (CNT), nano-silicon, and specialised cathode and anode materials. These are not laboratory curiosities — they are supplied in commercial quantities to industrial customers across six countries.",
+      "In the coatings industry, adding just 0.5–2% graphene to epoxy or polyurethane formulations can improve corrosion resistance by 60%, increase thermal conductivity by 300%, and enhance mechanical strength by 40%. For marine coatings, anti-fouling, and industrial protective coatings, these improvements translate directly into extended service life and reduced maintenance costs.",
+      "In polymer composites, graphene-reinforced materials are replacing metal components in automotive and aerospace applications where weight reduction is critical. A graphene-enhanced nylon composite can achieve the stiffness of aluminium at one-third the weight — enabling lighter vehicles with better fuel efficiency or range.",
+      "For battery manufacturers, Nordische's active materials serve as drop-in performance enhancers. Adding FLG to lithium-ion cathodes improves rate capability and cycle life. Nano-silicon anode additives can increase theoretical capacity by 10×. These materials are validated, characterised, and supplied with full technical data sheets for integration into existing production lines.",
+      "The active materials business represents Nordische's most immediately scalable revenue stream — the materials are produced today, shipped globally, and generate recurring revenue from industrial customers who integrate them into their own products.",
+    ],
+  },
+] as const;

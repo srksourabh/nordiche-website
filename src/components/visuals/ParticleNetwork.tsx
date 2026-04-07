@@ -18,18 +18,21 @@ const PILLAR_IMAGES = [
  */
 export function ParticleNetwork({ className = "" }: { className?: string }) {
   const nodes = [
-    { x: 80, y: 60, label: "Al-G", size: 10 },
-    { x: 200, y: 40, label: "BMS", size: 8 },
-    { x: 320, y: 70, label: "Grid", size: 9 },
-    { x: 140, y: 140, label: "EV", size: 9 },
-    { x: 260, y: 160, label: "LUC", size: 8 },
-    { x: 380, y: 130, label: "IoT", size: 7 },
-    { x: 50, y: 170, label: "R&D", size: 7 },
-    { x: 420, y: 50, label: "H₂", size: 8 },
+    { x: 30, y: 55, label: "R&D", size: 8 },
+    { x: 120, y: 35, label: "Al-G", size: 10 },
+    { x: 230, y: 25, label: "BMS", size: 9 },
+    { x: 350, y: 45, label: "Grid", size: 9 },
+    { x: 460, y: 30, label: "H₂", size: 8 },
+    { x: 70, y: 140, label: "EV", size: 9 },
+    { x: 180, y: 160, label: "LUC", size: 8 },
+    { x: 300, y: 150, label: "IoT", size: 8 },
+    { x: 420, y: 170, label: "ESS", size: 9 },
+    { x: 470, y: 110, label: "AI", size: 7 },
   ];
 
   const edges = [
-    [0, 1], [1, 2], [0, 3], [3, 4], [4, 5], [2, 5], [1, 4], [6, 0], [6, 3], [2, 7], [5, 7],
+    [0, 1], [1, 2], [2, 3], [3, 4], [0, 5], [5, 6], [6, 7], [7, 8], [8, 9],
+    [1, 5], [1, 6], [2, 6], [2, 7], [3, 7], [3, 8], [4, 9], [5, 7], [6, 8],
   ];
 
   return (
@@ -53,7 +56,7 @@ export function ParticleNetwork({ className = "" }: { className?: string }) {
       <div className="absolute inset-0 bg-[color:rgb(10_12_16_/_0.72)]" />
 
       {/* Animated SVG network on top */}
-      <svg viewBox="0 0 460 220" className="relative z-10 h-full w-full" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 500 200" className="relative z-10 h-full w-full" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <filter id="node-glow">
             <feGaussianBlur stdDeviation="4" result="blur" />

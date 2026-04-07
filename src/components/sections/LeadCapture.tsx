@@ -40,7 +40,7 @@ export function LeadCapture({
   const [isPending, startTransition] = useTransition();
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
-  const endpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT || "";
+  const endpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT || "/api/contact";
   const {
     register,
     handleSubmit,
