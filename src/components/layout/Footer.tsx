@@ -90,6 +90,16 @@ export function Footer() {
           <p>Partners in India · Germany · Spain · Holland · UK · USA</p>
         </div>
       </div>
+      <div className="border-t border-[color:rgb(42_53_73_/_0.5)] px-4 py-3 text-center">
+        <p className="text-[10px] tracking-wide text-[color:rgb(132_148_176_/_0.45)]">
+          Developed by{" "}
+          <a href="https://ultimatesolutions.in" rel="noreferrer" target="_blank" className="hover:text-[color:rgb(132_148_176_/_0.7)]">
+            uds/ai
+          </a>{" "}
+          · <a href="tel:+919836719911" className="hover:text-[color:rgb(132_148_176_/_0.7)]">9836719911</a>{" "}
+          · Website, Web App, Automation & Business Transformation
+        </p>
+      </div>
     </footer>
   );
 }
