@@ -1,5 +1,5 @@
 interface Env {
-  RESEND_API_KEY: string;
+  WEB3FORMS_KEY: string;
 }
 
 interface LeadFormData {
@@ -13,9 +13,7 @@ interface LeadFormData {
   source?: string;
 }
 
-const TO_EMAIL = "info@nordischeenergy.com";
-const BCC_EMAIL = "srksourabh@gmail.com";
-const FROM_EMAIL = "Nordische Energy <noreply@nordischeenergy.com>";
+const TO_EMAIL = "srksourabh@gmail.com";
 
 function escapeHtml(str: string): string {
   return str
@@ -63,33 +61,32 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       });
     }
 
-    const apiKey = context.env.RESEND_API_KEY;
-    if (!apiKey) {
+    const accessKey = context.env.WEB3FORMS_KEY;
+    if (!accessKey) {
       return new Response(JSON.stringify({ error: "Email service not configured" }), {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
 
-    const emailResponse = await fetch("https://api.resend.com/emails", {
+    const emailResponse = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        from: FROM_EMAIL,
-        to: [TO_EMAIL],
-        bcc: [BCC_EMAIL],
-        reply_to: data.email,
+        access_key: accessKey,
         subject: `New Lead: ${data.company} — ${data.industry}`,
-        html: buildEmailHtml(data),
+        from_name: "Nordische Energy Website",
+        to: TO_EMAIL,
+        replyto: data.email,
+        message: buildEmailHtml(data),
+        // Send as HTML email
+        "content-type": "text/html",
       }),
     });
 
     if (!emailResponse.ok) {
       const errBody = await emailResponse.text();
-      console.error("Resend API error:", errBody);
+      console.error("Web3Forms API error:", errBody);
       return new Response(JSON.stringify({ error: "Failed to send email" }), {
         status: 502,
         headers: { "Content-Type": "application/json", ...corsHeaders },
